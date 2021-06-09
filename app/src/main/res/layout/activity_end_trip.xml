@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <include layout="@layout/common_title_bar_theme" />
+    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_10dp"
+        android:background="@color/activity_bg"
+        app:cardCornerRadius="@dimen/space_3dp"
+        app:cardElevation="1dp">
+
+        <!--已支付布局-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/space_30dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="42.09"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_5dp"
+                    android:drawableRight="@mipmap/rightarrow"
+                    android:drawablePadding="@dimen/space_10dp"
+                    android:text="元"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已支付"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+        <!--订单取消布局-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="乘客已取消，本次取消您无责"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_20sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:drawableLeft="@mipmap/yuan_grey"
+                android:gravity="center_vertical"
+                android:text="本次取消不影响您的服务分"
+                android:textColor="@color/light_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10dp"
+                android:drawableLeft="@mipmap/yuan_grey"
+                android:gravity="center_vertical"
+                android:text="本次取消无空驶补偿费"
+                android:textColor="@color/light_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_20dp"
+                android:gravity="center_vertical"
+                android:text="本次取消无空驶补偿费"
+                android:textSize="@dimen/font_size_12sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_10dp"
+        android:layout_marginRight="@dimen/space_10dp"
+        android:background="@color/activity_bg"
+        app:cardCornerRadius="@dimen/space_3dp"
+        app:cardElevation="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1148"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="尾号"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/font_size_16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/yuan_theme" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="南昌国际机场-T2-1F到达层停车场广告牌旁"
+                        android:textColor="@color/gray" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/yuan_green" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="南昌县莲塘镇上峰景城8栋一单元1202"
+                        android:textColor="@color/gray" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_10dp"
+        android:background="@color/activity_bg"
+        app:cardCornerRadius="@dimen/space_3dp"
+        app:cardElevation="1dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/serving_complete_service" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/rightarrow"
+                    android:drawablePadding="@dimen/space_10dp"
+                    android:gravity="center_vertical"
+                    android:text="在线客服"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_10dp"
+                    android:text="专属在线客服，轻松解决订单问题"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/font_size_14sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_10dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/space_0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:paddingLeft="@dimen/space_20dp"
+                android:paddingRight="@dimen/space_20dp"
+                android:paddingTop="@dimen/space_10dp"
+                android:paddingBottom="@dimen/space_10dp"
+                android:background="@drawable/xiuxi_bg"
+                android:text="休息" />
+            <TextView
+                android:layout_width="@dimen/space_0dp"
+                android:layout_weight="2"
+                android:layout_marginLeft="@dimen/space_20dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingLeft="@dimen/space_20dp"
+                android:paddingRight="@dimen/space_20dp"
+                android:gravity="center"
+                android:paddingTop="@dimen/space_10dp"
+                android:paddingBottom="@dimen/space_10dp"
+                android:background="@drawable/theme_bg_5"
+                android:text="完成，继续接单" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

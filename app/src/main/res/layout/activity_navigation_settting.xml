@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar_theme" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:background="@color/white"
+        android:padding="@dimen/space_10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="车头方向"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:layout_marginBottom="@dimen/space_10dp"
+            android:orientation="horizontal">
+
+            <TextView android:id="@+id/gs_chetou"
+                android:layout_width="@dimen/space_0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_10dp"
+                android:gravity="center"
+                android:background="@drawable/border_theme_1"
+                android:textColor="@color/theme_color"
+                android:text="跟随车头"/>
+
+            <TextView android:id="@+id/sz_xb"
+                android:layout_width="@dimen/space_0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/space_20dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_10dp"
+                android:gravity="center"
+                android:background="@drawable/border_grey_1"
+                android:textColor="@color/black"
+                android:text="始终向北"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginBottom="@dimen/space_10dp"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:text="日夜模式"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView android:id="@+id/auto_qie"
+                android:layout_width="@dimen/space_0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_10dp"
+                android:gravity="center"
+                android:background="@drawable/border_theme_1"
+                android:textColor="@color/theme_color"
+                android:text="自动切换"/>
+
+            <TextView android:id="@+id/sz_rj"
+                android:layout_width="@dimen/space_0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/space_20dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_10dp"
+                android:gravity="center"
+                android:background="@drawable/border_grey_1"
+                android:textColor="@color/black"
+                android:text="始终日间"/>
+
+            <TextView android:id="@+id/sz_yj"
+                android:layout_width="@dimen/space_0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/space_20dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_10dp"
+                android:gravity="center"
+                android:background="@drawable/border_grey_1"
+                android:textColor="@color/black"
+                android:text="始终夜间"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/space_15dp"
+        android:paddingRight="@dimen/space_15dp"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:text="路况"/>
+
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/traffic_check"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/space_50dp"
+                android:layout_height="@dimen/space_30dp"
+                android:layout_centerVertical="true"
+                app:sb_button_color="@color/white"
+                app:sb_checked="true"
+                app:sb_checked_color="@color/theme_color" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/view_liner_05dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:text="导航声音"/>
+
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/voice_check"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/space_50dp"
+                android:layout_height="@dimen/space_30dp"
+                android:layout_centerVertical="true"
+                app:sb_button_color="@color/white"
+                app:sb_checked="true"
+                app:sb_checked_color="@color/theme_color" />
+
+        </RelativeLayout>
+        <include layout="@layout/view_liner_05dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:text="显示牵引线"/>
+
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/line_check"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/space_50dp"
+                android:layout_height="@dimen/space_30dp"
+                android:layout_centerVertical="true"
+                app:sb_button_color="@color/white"
+                app:sb_checked="true"
+                app:sb_checked_color="@color/theme_color" />
+
+        </RelativeLayout>
+        <include layout="@layout/view_liner_05dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:text="路况条"/>
+
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/lukuang_check"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/space_50dp"
+                android:layout_height="@dimen/space_30dp"
+                android:layout_centerVertical="true"
+                app:sb_button_color="@color/white"
+                app:sb_checked="true"
+                app:sb_checked_color="@color/theme_color" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

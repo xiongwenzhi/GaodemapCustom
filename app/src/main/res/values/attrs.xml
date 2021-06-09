@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 仿 ios 开关按钮 -->
+    <declare-styleable name="SwitchButton">
+        <!-- 是否选中 -->
+        <attr name="android:checked" />
+        <!-- 是否禁用 -->
+        <attr name="android:enabled" />
+    </declare-styleable>
+
+    <!-- 正则表达式编辑框 -->
+    <declare-styleable name="RegexEditText">
+        <!-- 正则输入限制 -->
+        <attr name="inputRegex" format="string" />
+        <!-- 常用正则类型 -->
+        <attr name="regexType">
+            <!-- 手机号（只能以 1 开头） -->
+            <enum name="mobile" value="0x01" />
+            <!-- 中文（普通的中文字符） -->
+            <enum name="chinese" value="0x02" />
+            <!-- 英文（大写和小写的英文） -->
+            <enum name="english" value="0x03" />
+            <!-- 整数（非 0 开头的数字） -->
+            <enum name="count" value="0x04" />
+            <!-- 用户名（中文、英文、数字） -->
+            <enum name="name" value="0x05" />
+            <!-- 非空格字符 -->
+            <enum name="nonnull" value="0x06" />
+        </attr>
+    </declare-styleable>
+
+    <!-- 设置栏 -->
+    <declare-styleable name="SettingBar">
+        <!-- 左边 -->
+        <attr name="bar_leftText" format="string" />
+        <attr name="bar_leftHint" format="string" />
+        <attr name="bar_leftIcon" format="reference" />
+        <attr name="bar_leftColor" format="color" />
+        <attr name="bar_leftSize" format="dimension" />
+        <!-- 右边 -->
+        <attr name="bar_rightText" format="string" />
+        <attr name="bar_rightHint" format="string" />
+        <attr name="bar_rightIcon" format="reference" />
+        <attr name="bar_rightColor" format="color" />
+        <attr name="bar_rightSize" format="dimension" />
+        <!-- 分割线 -->
+        <attr name="bar_lineVisible" format="boolean" />
+        <attr name="bar_lineColor" format="reference|color" />
+        <attr name="bar_lineSize" format="dimension" />
+        <attr name="bar_lineMargin" format="dimension" />
+    </declare-styleable>
+
+    <!-- 自定义 ViewStub -->
+    <declare-styleable name="CustomViewStub">
+        <!-- 布局 id -->
+        <attr name="android:layout" />
+    </declare-styleable>
+
+    <!-- 缩放的 ImageView -->
+    <declare-styleable name="ScaleImageView">
+        <!-- 缩放比例 -->
+        <attr name="scaleRatio" format="float" />
+    </declare-styleable>
+
+    <!-- 按照比例显示的 FrameLayout -->
+    <declare-styleable name="RatioFrameLayout">
+        <!-- 宽高比例 -->
+        <attr name="sizeRatio" format="float" />
+    </declare-styleable>
+    <declare-styleable name="RadarView">
+        <!--圆圈和交叉线的颜色-->
+        <attr name="circleColor" format="color" />
+        <!--圆圈的数量-->
+        <attr name="circleNum" format="integer" />
+        <!--扫描的颜色 RadarView会对这个颜色做渐变透明处理-->
+        <attr name="sweepColor" format="color" />
+        <!--水滴的颜色-->
+        <attr name="raindropColor" format="color" />
+        <!--水滴的数量 这里表示的是水滴最多能同时出现的数量。因为水滴是随机产生的，数量是不确定的-->
+        <attr name="raindropNum" format="integer" />
+        <!--是否显示交叉线-->
+        <attr name="showCross" format="boolean" />
+        <!--是否显示水滴-->
+        <attr name="showRaindrop" format="boolean" />
+        <!--扫描的转速，表示几秒转一圈-->
+        <attr name="speed" format="float" />
+        <!--水滴显示和消失的速度-->
+        <attr name="flicker" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="TipView">
+        <!-- 显示的数量 -->
+        <attr name="text" format="integer" />
+        <!-- 文字大小，0-1，1为默认，值越小，文字越小 -->
+        <attr name="textMargin" format="float" />
+        <!-- 数量文字的颜色 -->
+        <attr name="textColor" format="reference|color" />
+        <!-- 最大数量，超出这个数字会显示 这个数字+ -->
+        <attr name="textMax" format="integer" />
+        <!-- 背景圆的颜色 -->
+        <attr name="tips_circleColor" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="CircleRelativeLayoutLayout">
+        <attr name="background_color" format="color" />
+        <attr name="background_alpha" format="integer" />
+    </declare-styleable>
+    <!-- 滑动解锁控件 xml配置属性 -->
+    <declare-styleable name="SlideToUnlockView">
+        <attr name="slideImageViewWidth" format="dimension" /><!-- 滑块宽度 -->
+        <attr name="slideImageViewResId" format="reference" /><!-- 滑块资源id -->
+        <attr name="slideImageViewResIdAfter" format="reference" /><!-- 滑动到右边时,滑块资源id -->
+        <attr name="viewBackgroundResId" format="reference" /><!-- 背景资源id -->
+        <attr name="textHint" format="string" /><!-- 文本内容 -->
+        <attr name="textSize" format="integer" /><!-- 文本字号 -->
+        <attr name="textColorResId" format="color" /><!-- 文本字色 -->
+        <attr name="slideThreshold" format="float" /><!-- 滑动阈值,默认是0.5,当右滑距离不满整个控件宽度的0.5,就会回弹至左边 -->
+    </declare-styleable>
+
+    <!--自定义虚线-->
+    <declare-styleable name="dashedline">
+        <attr name="lineColor" format="color" />
+        <attr name="lineLength" format="dimension" />
+        <attr name="lineSpace" format="dimension" />
+    </declare-styleable>
+</resources>

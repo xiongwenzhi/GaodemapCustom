@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <include layout="@layout/common_title_bar_theme" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/space_5dp"
+                android:layout_margin="@dimen/space_10dp"
+                app:cardCornerRadius="@dimen/space_5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <RelativeLayout android:id="@+id/choose_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/space_10dp">
+
+                        <TextView
+                            android:id="@+id/fz_ct"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="合规发证城市:"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/fz_ct"
+                            android:text="南昌市"
+                            android:textColor="@color/black" />
+
+                        <TextView android:id="@+id/city_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:drawableRight="@mipmap/leftarrow"
+                            android:text="切换城市"
+                            android:textColor="@color/gray" />
+                    </RelativeLayout>
+
+                    <include layout="@layout/view_liner_05dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/hegui_bg"
+                        android:paddingLeft="@dimen/space_10dp"
+                        android:paddingRight="@dimen/space_10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical">
+
+                            <TextView android:id="@+id/name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="成为合规司机"
+                                android:textColor="@color/theme_color"
+                                android:textSize="@dimen/font_size_20sp"
+                                android:textStyle="bold" />
+
+                                <TextView android:id="@+id/field"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="早日合规，安心出车"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_size_18sp"
+                                    android:layout_marginTop="@dimen/space_10dp"
+                                    android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/space_100dp"
+                                android:scaleType="fitEnd"
+                                android:src="@mipmap/salute"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <TextView android:id="@+id/tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray"
+                        android:layout_marginLeft="@dimen/space_10dp"
+                        android:layout_marginRight="@dimen/space_10dp"
+                        android:layout_marginTop="@dimen/space_10dp"
+                        android:text="通过网约车驾驶员和网约车运输证，保证司机正常接单，更安全出车"/>
+
+
+
+                    <TextView android:id="@+id/question"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_10dp"
+                        android:drawablePadding="@dimen/space_10dp"
+                        android:textColor="#3b5d85"
+                        android:layout_marginBottom="@dimen/space_20dp"
+                        android:drawableRight="@mipmap/x_serving_arrow"
+                        android:text="常见问题"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/qualificationList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:elevation="@dimen/space_5dp"-->
+<!--                android:background="@color/white"-->
+<!--                android:layout_marginBottom="@dimen/space_10dp"-->
+<!--                android:layout_marginLeft="@dimen/space_10dp"-->
+<!--                android:layout_marginRight="@dimen/space_10dp"-->
+<!--                app:cardCornerRadius="@dimen/space_5dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:paddingLeft="@dimen/space_10dp"-->
+<!--                        android:paddingTop="@dimen/space_20dp"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:paddingRight="@dimen/space_10dp"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="@dimen/space_0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:orientation="vertical">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="网约车驾驶员证"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textSize="@dimen/font_size_20sp"-->
+<!--                                android:textStyle="bold" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginTop="@dimen/space_5dp"-->
+<!--                                android:text="上传证书到安橙平台，享受合规权益保障"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="@dimen/font_size_14sp"-->
+<!--                                />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView android:id="@+id/upload_driver"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="bottom"-->
+<!--                            android:layout_marginRight="@dimen/space_20dp"-->
+<!--                            android:text="去上传"-->
+<!--                            android:padding="@dimen/space_5dp"-->
+<!--                            android:background="@drawable/theme_bg_5"-->
+<!--                            android:drawablePadding="@dimen/space_10dp"-->
+<!--                            android:textColor="@color/white" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <RelativeLayout android:id="@+id/guide_layout"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:padding="@dimen/space_10dp"-->
+<!--                        android:layout_marginTop="@dimen/space_10dp"-->
+<!--                        android:background="@color/activity_bg"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <TextView android:id="@+id/guide"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textColor="#5a6c98"-->
+<!--                            android:text="查看网约车驾驶员证办理引导"/>-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:layout_alignParentRight="true"-->
+<!--                            android:src="@mipmap/rightarrow"/>-->
+<!--                    </RelativeLayout>-->
+
+<!--                </LinearLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:elevation="@dimen/space_5dp"-->
+<!--                android:background="@color/white"-->
+<!--                android:layout_marginLeft="@dimen/space_10dp"-->
+<!--                android:layout_marginRight="@dimen/space_10dp"-->
+<!--                app:cardCornerRadius="@dimen/space_5dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:paddingLeft="@dimen/space_10dp"-->
+<!--                        android:paddingTop="@dimen/space_20dp"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:paddingBottom="@dimen/space_20dp"-->
+<!--                        android:paddingRight="@dimen/space_10dp"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="@dimen/space_0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:orientation="vertical">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="网约车运输证"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textSize="@dimen/font_size_20sp"-->
+<!--                                android:textStyle="bold" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginTop="@dimen/space_5dp"-->
+<!--                                android:text="上传证书到安橙平台，享受合规权益保障"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="@dimen/font_size_14sp"-->
+<!--                                />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="bottom"-->
+<!--                            android:layout_marginRight="@dimen/space_20dp"-->
+<!--                            android:text="去上传"-->
+<!--                            android:padding="@dimen/space_5dp"-->
+<!--                            android:background="@drawable/theme_bg_5"-->
+<!--                            android:drawablePadding="@dimen/space_10dp"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</LinearLayout>

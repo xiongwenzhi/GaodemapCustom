@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <include layout="@layout/common_title_bar_theme" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_color"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/space_40dp"
+            android:paddingTop="@dimen/space_20dp"
+            android:paddingBottom="@dimen/space_60dp"
+            android:orientation="vertical">
+
+            <com.android.orangetravel.base.widgets.CircleImageView
+                android:id="@+id/frg_mine_header"
+                android:layout_width="@dimen/space_70dp"
+                android:layout_height="@dimen/space_70dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/default_avatar"
+                app:border_color="@color/white"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_10dp"
+                    android:text="4.8 | 贯彻寄到的云"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xiuxi_bg"/>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/activity_bg"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:layout_marginRight="@dimen/space_10dp"
+            app:cardCornerRadius="@dimen/space_5dp"
+            android:layout_gravity="bottom"
+            app:cardElevation="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_15dp">
+
+                <LinearLayout
+                    android:layout_width="@dimen/space_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView android:id="@+id/serviceDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1849"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_18sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="安龄(天)"
+                        android:textSize="@dimen/font_size_14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/space_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView android:id="@+id/sumOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4296"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_18sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="累计完单(单)"
+                        android:textSize="@dimen/font_size_14sp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                android:layout_width="@dimen/space_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                    android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView android:id="@+id/sumWater"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="34.21万"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_18sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="累计收入(元)"
+                    android:textSize="@dimen/font_size_14sp"
+                   />
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+    <RelativeLayout android:id="@+id/look_details_personal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/space_20dp"
+        android:paddingRight="@dimen/space_20dp"
+        android:paddingTop="@dimen/space_10dp"
+        android:paddingBottom="@dimen/space_10dp"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/space_15dp"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/zj_yc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="证件异常"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/zj_yc"
+            android:textSize="@dimen/font_size_12sp"
+            android:layout_marginTop="@dimen/space_5dp"
+            android:text="请在规定日期内完成核验，否则将无法出车"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/theme_color"
+            android:text="去上传 >"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/change_city"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:paddingLeft="@dimen/space_20dp"
+        android:paddingRight="@dimen/space_20dp"
+        android:paddingTop="@dimen/space_10dp"
+        android:paddingBottom="@dimen/space_10dp"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接单城市"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@mipmap/x_profile_arrow"
+            android:gravity="center_vertical"
+            android:text="南昌市" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/space_20dp"
+        android:paddingRight="@dimen/space_20dp"
+        android:paddingTop="@dimen/space_10dp"
+        android:paddingBottom="@dimen/space_10dp"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="头像"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@mipmap/x_profile_arrow"
+            android:gravity="center_vertical"
+            android:text="审核成功" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/space_20dp"
+        android:paddingRight="@dimen/space_20dp"
+        android:paddingTop="@dimen/space_10dp"
+        android:paddingBottom="@dimen/space_10dp"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名"
+            android:textColor="@color/black"/>
+
+        <TextView android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:text="罗盼"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/space_20dp"
+        android:paddingRight="@dimen/space_20dp"
+        android:paddingTop="@dimen/space_10dp"
+        android:paddingBottom="@dimen/space_10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="身份证号码"
+            android:textColor="@color/black"/>
+
+        <TextView android:id="@+id/id_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:text="360138889999999999"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/space_20dp"
+        android:paddingRight="@dimen/space_20dp"
+        android:paddingTop="@dimen/space_10dp"
+        android:paddingBottom="@dimen/space_10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="驾驶证初次领着日期"
+            android:textColor="@color/black"/>
+
+        <TextView android:id="@+id/card_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:text="1990-1-01"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/real_name"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/space_20dp"
+        android:paddingRight="@dimen/space_20dp"
+        android:paddingTop="@dimen/space_10dp"
+        android:paddingBottom="@dimen/space_10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账号验证"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@mipmap/x_profile_arrow"
+            android:text="已认证"
+            />
+
+    </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

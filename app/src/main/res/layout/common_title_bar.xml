@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.android.orangetravel.base.widgets.StatusBarView
+        android:id="@+id/id_status_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/trans" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height">
+
+        <FrameLayout android:id="@+id/left_image_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/id_image_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:paddingLeft="@dimen/space_15dp"
+                android:paddingRight="@dimen/space_5dp"
+                android:src="@mipmap/left_back" />
+
+            <ImageView android:id="@+id/left_red_yuan"
+                android:layout_width="@dimen/space_10dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/space_10dp"
+                android:src="@mipmap/yuan_index"
+                android:visibility="gone"
+                android:layout_height="@dimen/space_10dp"/>
+
+        </FrameLayout>
+
+
+        <ImageView
+            android:id="@+id/id_image_x"
+            android:layout_width="@dimen/space_50dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/left_image_frame"
+            android:clickable="true"
+            android:paddingLeft="@dimen/space_15dp"
+            android:paddingRight="@dimen/space_15dp"
+            android:src="@mipmap/delete_webview"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/id_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/space_50dp"
+            android:layout_marginRight="@dimen/space_50dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/app_name"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/font_size_17sp" />
+
+        <ImageView
+            android:id="@+id/id_image_right_icon_one"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/right_layout"
+            android:clickable="true"
+            android:paddingLeft="@dimen/space_15dp"
+            android:paddingRight="@dimen/space_15dp"
+            android:src="@mipmap/left_back"
+            android:visibility="gone" />
+
+
+        <FrameLayout android:id="@+id/right_layout"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space_15dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/id_image_right_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:layout_marginRight="@dimen/space_8dp"
+                android:src="@mipmap/left_back" />
+
+            <ImageView android:id="@+id/right_red_yuan"
+                android:layout_width="@dimen/space_10dp"
+                android:layout_gravity="right"
+                android:layout_marginLeft="@dimen/space_15dp"
+                android:layout_marginTop="@dimen/space_10dp"
+                android:src="@mipmap/yuan_index"
+                android:visibility="gone"
+                android:layout_height="@dimen/space_10dp"/>
+
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/id_tv_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@+id/right_layout"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/space_14dp"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/font_size_16sp" />
+
+    </RelativeLayout>
+
+    <View android:id="@+id/line_title"
+        style="@style/style_line_horizontal_gray2" />
+
+</LinearLayout>

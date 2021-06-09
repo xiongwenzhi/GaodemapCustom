@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    xmlns:chuck="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <include layout="@layout/common_title_bar_theme" />
+
+        <TextView android:id="@+id/confirm_tips"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:padding="@dimen/space_30dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_18sp"
+            android:text="感谢您将尾号1148送到目的地"
+            android:textStyle="bold"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/space_10dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/space_0dp"
+            android:layout_height="@dimen/space_0.5dp"
+            android:background="@color/gray2"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="若行程产生附加费，请添加"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:layout_marginRight="@dimen/space_10dp"
+            android:textSize="@dimen/font_size_14sp"/>
+
+        <View
+            android:layout_width="@dimen/space_0dp"
+            android:background="@color/gray2"
+            android:layout_height="@dimen/space_0.5dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_10dp"
+        android:padding="@dimen/space_20dp"
+        android:background="@drawable/confirm_bg_border_one"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="高速费"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="@dimen/space_200dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_14sp"
+                android:hint="请输入金额"
+                android:gravity="right"
+                android:layout_marginRight="@dimen/space_10dp"
+                android:background="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_10dp"
+        android:padding="@dimen/space_20dp"
+        android:background="@drawable/confirm_bg_border_one"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="路桥费"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="@dimen/space_200dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_14sp"
+                android:hint="请输入金额"
+                android:gravity="right"
+                android:layout_marginRight="@dimen/space_10dp"
+                android:background="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_10dp"
+        android:padding="@dimen/space_20dp"
+        android:background="@drawable/confirm_bg_border_one"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="停车费"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="@dimen/space_200dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_14sp"
+                android:hint="请输入金额"
+                android:gravity="right"
+                android:layout_marginRight="@dimen/space_10dp"
+                android:background="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_10dp"
+        android:padding="@dimen/space_20dp"
+        android:background="@drawable/confirm_bg_border_one"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="其他费用"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="@dimen/space_200dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_14sp"
+                android:hint="请输入金额"
+                android:gravity="right"
+                android:layout_marginRight="@dimen/space_10dp"
+                android:background="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/slide_up_car"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <com.android.orangetravel.ui.widgets.view.CustomSlideToUnlockView
+            android:id="@+id/slide_to_unlock"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_80dp"
+            chuck:viewBackgroundResId="@drawable/shape_round_normal_theme.xml"
+            chuck:slideImageViewWidth="50dp"
+            chuck:slideThreshold="0.5"
+            chuck:textHint=""
+            chuck:textColorResId="@color/white">
+
+        </com.android.orangetravel.ui.widgets.view.CustomSlideToUnlockView>
+
+    </LinearLayout>
+
+</LinearLayout>

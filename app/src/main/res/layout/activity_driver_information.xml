@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <include layout="@layout/common_title_bar_theme" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+            <RelativeLayout android:id="@+id/choose_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/space_10dp">
+
+                <TextView
+                    android:id="@+id/fz_ct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发证城市(必填)"
+                    android:textColor="@color/gray" />
+
+
+                <TextView android:id="@+id/city_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@mipmap/leftarrow"
+                    android:text="切换城市"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+
+                <include layout="@layout/view_liner_05dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:background="#f8f7f7"
+                    android:layout_height="@dimen/space_5dp"/>
+
+
+            <include layout="@layout/view_liner_05dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="请上传证件照片，保证照片清晰"
+                android:background="#f8f7f7"
+                android:padding="@dimen/space_10dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView android:id="@+id/yunshuz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_10dp"
+                android:text="本人网约车驾驶员证(必填)"/>
+
+
+            <LinearLayout android:id="@+id/choose_photo"
+                android:layout_width="@dimen/space_150dp"
+                android:layout_height="@dimen/space_80dp"
+                android:layout_marginLeft="@dimen/space_10dp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/space_10dp"
+                android:background="@drawable/carmer_bg">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.github.xiaofeidev.round.RoundImageView
+                        android:id="@+id/car_test"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:borderRadius="@dimen/space_5dp"
+                        app:rd_radius="@dimen/space_10dp"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="点击上传"
+                        android:layout_gravity="center"
+                        android:drawableTop="@mipmap/icon_camera_grey"/>
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/space_10dp"
+                android:paddingRight="@dimen/space_10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/space_0dp"
+                    android:layout_height="@dimen/space_0.5dp"
+                    android:background="@color/gray1"
+                    android:layout_marginRight="@dimen/space_20dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请正确填写以下信息"/>
+
+                <View
+                    android:layout_width="@dimen/space_0dp"
+                    android:layout_height="@dimen/space_0.5dp"
+                    android:background="@color/gray1"
+                    android:layout_marginLeft="@dimen/space_20dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/id_number_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="网约车驾驶员证号"
+                    android:textColor="@color/light_black" />
+
+                <EditText
+                    android:id="@+id/id_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:layout_alignParentRight="true"
+                    android:hint="请输入"
+                    android:maxLines="1"
+                    android:textColor="@color/cp_color_gray_dark"
+                    android:textColorHint="@color/cp_color_gray_light"
+                    android:textSize="@dimen/cp_search_text_size" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/view_liner_05dp"/>
+
+            <RelativeLayout android:id="@+id/choose_time_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_10dp"
+                android:orientation="horizontal">
+
+                <TextView android:id="@+id/effective_timetips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_black"
+                    android:text="网约车驾驶员证有效日期(必填)"/>
+
+                <TextView android:id="@+id/effective_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:layout_alignParentRight="true"
+                    android:text="请选择 >"
+                    android:maxLines="1"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/cp_search_text_size" />
+
+            </RelativeLayout>
+
+            <include  layout="@layout/view_liner_05dp"/>
+
+            <RelativeLayout  android:id="@+id/choose_time_stop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_10dp"
+                android:orientation="horizontal">
+
+                <TextView android:id="@+id/certificate_time_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_black"
+                    android:text="网约车驾驶员证发证日期(必填)"/>
+
+                <TextView android:id="@+id/certificate_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:layout_alignParentRight="true"
+                    android:text="请选择 >"
+                    android:maxLines="1"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/cp_search_text_size" />
+
+            </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/complianceEdit"
+                style="@style/ThemeColorBorderRadiusBtn"
+                android:layout_marginLeft="@dimen/space_20dp"
+                android:layout_marginRight="@dimen/space_20dp"
+                android:layout_marginBottom="@dimen/space_20dp"
+                android:text="提交" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</LinearLayout>

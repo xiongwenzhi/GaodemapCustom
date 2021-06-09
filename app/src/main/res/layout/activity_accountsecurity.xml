@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/common_title_bar_theme" />
+
+
+    <TextView android:id="@+id/change_phone"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/space_20dp"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:drawableRight="@mipmap/profile_arror"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:text="修改手机号"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14sp" />
+
+    <include layout="@layout/view_liner_05dp"/>
+    <TextView android:id="@+id/update_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:drawableRight="@mipmap/profile_arror"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:text="修改密码"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14sp" />
+
+    <include layout="@layout/view_liner_05dp"/>
+    <TextView android:id="@+id/device_manage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:drawableRight="@mipmap/profile_arror"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:text="设备管理"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14sp" />
+
+
+
+    <TextView android:id="@+id/accountcancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:drawableRight="@mipmap/profile_arror"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/space_30dp"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:text="注销账号"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14sp" />
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

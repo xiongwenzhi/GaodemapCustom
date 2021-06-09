@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/menu_image"
+        android:layout_width="@dimen/space_30dp"
+        android:scaleType="centerInside"
+        android:layout_height="@dimen/space_30dp" />
+
+    <TextView
+        android:id="@+id/menu_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/light_black"
+        android:layout_marginTop="@dimen/space_5dp"
+        android:text="行程" />
+
+</LinearLayout>

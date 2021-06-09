@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dialog_common_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/font_size_16sp" />
+
+        <TextView
+            android:id="@+id/dialog_common_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="需先支付快递费"
+            android:textColor="@color/gray1"
+            android:textSize="@dimen/font_size_13sp"
+            android:visibility="gone" />
+
+        <Space
+            android:layout_width="@dimen/space_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <CheckBox
+            android:id="@+id/dialog_common_item_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@null"
+            android:clickable="false"
+            android:drawableLeft="@drawable/checkbox_hollow"
+            android:padding="@dimen/space_10dp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dialog_common_item_line"
+        style="@style/style_line_horizontal_gray3"
+        android:layout_marginLeft="@dimen/space_10dp"
+        android:layout_marginRight="@dimen/space_10dp" />
+
+</LinearLayout>

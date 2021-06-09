@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar_theme" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/space_10dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="姓名&#12288;&#12288;"/>
+
+        <TextView android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray2"
+            android:layout_marginLeft="@dimen/space_20dp"
+            android:text="*盘"/>
+    </LinearLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/space_10dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="身份证号"/>
+
+        <TextView android:id="@+id/id_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray2"
+            android:layout_marginLeft="@dimen/space_20dp"
+            android:text="3************7"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/choose_bank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/space_10dp"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="选择开户行"/>
+
+        <TextView android:id="@+id/bank_name"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:background="@null"
+            android:text="请选择开户行"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_14sp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="银行卡号"/>
+
+        <EditText android:id="@+id/input_card_num"
+            android:layout_width="match_parent"
+            android:hint="请输入本人银行卡号"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:background="@null"
+            android:textSize="@dimen/font_size_14sp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <include layout="@layout/view_liner_05dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="开户支行"/>
+
+        <EditText android:id="@+id/branch"
+            android:layout_width="match_parent"
+            android:hint="请输入开户支行"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:background="@null"
+            android:textSize="@dimen/font_size_14sp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <TextView android:id="@+id/support_card"
+        android:layout_width="wrap_content"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingTop="@dimen/space_5dp"
+        android:paddingBottom="@dimen/space_5dp"
+        android:drawablePadding="@dimen/space_10dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/icon_bank"
+        android:text="查看支持的银行，近支持储蓄卡 >"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="手机号&#12288;"/>
+
+        <EditText android:id="@+id/phone"
+            android:layout_width="@dimen/space_0dp"
+            android:layout_weight="1"
+            android:hint="请输入手机号"
+            android:inputType="phone"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:background="@null"
+            android:textSize="@dimen/font_size_14sp"
+            android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/send_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送验证码"/>
+    </LinearLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="验证码&#12288;"/>
+
+        <EditText android:id="@+id/msg_code"
+            android:layout_width="@dimen/space_0dp"
+            android:layout_weight="1"
+            android:hint="请输入短信验证码"
+            android:inputType="number"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:background="@null"
+            android:textSize="@dimen/font_size_14sp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <TextView android:id="@+id/phone_addback"
+        android:layout_width="wrap_content"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingTop="@dimen/space_5dp"
+        android:paddingBottom="@dimen/space_5dp"
+        android:drawablePadding="@dimen/space_10dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/icon_phone"
+        android:text="什么是银行预留手机号 >"/>
+
+
+    <TextView
+        android:id="@+id/emergency_btn"
+        style="@style/ThemeColorBorderRadiusBtn"
+        android:layout_marginBottom="@dimen/space_0dp"
+        android:layout_marginLeft="@dimen/space_20dp"
+        android:layout_marginRight="@dimen/space_20dp"
+        android:layout_marginTop="@dimen/space_40dp"
+        android:textColor="@color/white"
+        android:text="提交" />
+
+</LinearLayout>

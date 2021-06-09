@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar_theme"/>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout android:id="@+id/test_top_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/space_20dp"
+                    android:background="@color/title_bar_black"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <com.android.orangetravel.ui.widgets.view.RadarView
+                            android:id="@+id/radar"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_margin="10dp"
+                            app:circleColor="#f9905a"
+                            app:circleNum="3"
+                            app:flicker="3"
+                            app:speed="5"
+                            app:sweepColor="#f9905a"
+                            app:showCross="false"
+                            app:raindropNum="3"/>
+
+
+                        <TextView android:id="@+id/test_finish"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="检测完成"
+                            android:visibility="gone"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"/>
+
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="检测中"
+                        android:layout_marginTop="@dimen/space_20dp"
+                        android:textColor="@color/white"/>
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/test_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/test_result_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:background="@color/activity_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/space_10dp"
+                    android:paddingTop="@dimen/space_10dp"
+                    android:text="检测结果"/>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/space_8dp"
+                    android:layout_margin="@dimen/space_10dp"
+                    app:cardElevation="1dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/space_10dp"
+                        android:textColor="@color/black"
+                        android:drawablePadding="@dimen/space_10dp"
+                        android:drawableLeft="@mipmap/gantan"
+                        android:text="听单检测状态有异常"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/test_result"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>

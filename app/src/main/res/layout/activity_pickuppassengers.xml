@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:chuck="http://schemas.android.com/tools"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar_theme" />
+
+    <LinearLayout
+        android:id="@+id/navi_sdk_autonavi_port_leftwidget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/space_10dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/space_0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="去"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上峰景城"
+                        android:textColor="@color/theme_color"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_10dp"
+                    android:textColor="@color/gray1"
+                    android:text="全程19.7公里预计39分钟"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/space_0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/space_20dp"
+                android:background="@color/line_light_color"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/mapnavicon_iphone"
+                android:text="导航"/>
+        </LinearLayout>
+
+        <include layout="@layout/view_liner_05dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/space_10dp"
+            android:paddingTop="@dimen/space_2dp"
+            android:paddingBottom="@dimen/space_2dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/font_size_12sp"
+                android:layout_height="wrap_content"
+                android:text="请在"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/font_size_12sp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/theme_color"
+                android:text="5分01秒"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/font_size_12sp"
+                android:layout_height="wrap_content"
+                android:text="内到达乘客上车点"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_0dp"
+        android:layout_weight="1">
+
+        <com.amap.api.navi.AMapNaviView
+            android:id="@+id/navi_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <LinearLayout android:id="@+id/speed_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/speed_blue"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:background="@drawable/speed_white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView android:id="@+id/speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="@color/cblue"
+                    />
+                <TextView android:id="@+id/speed_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="km/h"
+                    android:textSize="12sp"
+                    android:textColor="@color/cblue"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/public_service_layout"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:layout_marginRight="@dimen/space_10dp"
+            android:layout_marginBottom="@dimen/space_10dp"
+            app:cardCornerRadius="@dimen/space_5dp"
+            android:layout_gravity="bottom"
+            android:elevation="@dimen/space_5dp"
+            android:layout_height="wrap_content">
+
+            <!--确认上车-->
+            <LinearLayout android:id="@+id/comfir_shangche"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_10dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/space_10dp"
+                    android:orientation="horizontal">
+
+                    <TextView android:id="@+id/wh_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="尾号1148"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_22sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/wh_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1人"
+                        android:drawablePadding="@dimen/space_5dp"
+                        android:layout_marginLeft="@dimen/space_20dp"
+                        android:gravity="center_vertical"
+                        android:drawableLeft="@mipmap/passenger_map_location"/>
+
+
+                    <TextView android:id="@+id/comfirm_up_car_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="确认上车"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/white"
+                        android:padding="@dimen/space_10dp"
+                        android:background="@drawable/theme_bg_5"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout android:id="@+id/update_count"
+                        android:layout_width="@dimen/space_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@mipmap/station_carpool_person"
+                            android:text="改人数"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="@dimen/space_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:drawableLeft="@mipmap/station_carpool_tel"
+                            android:text="电话"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--路程信息-->
+            <LinearLayout android:id="@+id/customer_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_10dp"
+                android:visibility="visible"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/space_40dp"
+                        android:layout_height="@dimen/space_40dp"
+                        android:src="@mipmap/default_avatar"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="尾号1148"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/space_0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/space_10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/yuan_green"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_12sp"
+                            android:text="江西省南昌市南昌县莲塘镇上峰景城8栋单元1202"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="@dimen/space_10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/yuan_theme"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_12sp"
+                            android:text="中关村软件园尚东数字山谷B区世纪花园"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_10dp"
+                    android:src="@mipmap/servinginfo_tel_nor"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout android:id="@+id/slide_up_car"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_80dp"
+            android:gravity="center"
+            android:visibility="visible"
+            android:orientation="horizontal">
+
+            <com.android.orangetravel.ui.widgets.view.CustomSlideToUnlockView
+                android:id="@+id/slide_to_unlock"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                chuck:viewBackgroundResId="@drawable/shape_round_normal_green"
+                chuck:slideImageViewWidth="50dp"
+                chuck:slideThreshold="0.5"
+                chuck:textHint=""
+                chuck:textColorResId="@color/white">
+
+            </com.android.orangetravel.ui.widgets.view.CustomSlideToUnlockView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

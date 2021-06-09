@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <include layout="@layout/common_title_bar_theme" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/space_20dp"
+            android:paddingRight="@dimen/space_20dp"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/space_30dp"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/app_logo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10dp"
+                android:textColor="@color/gray1"
+                android:text="安橙出行，美好出行"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:layout_marginBottom="@dimen/space_10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+86"
+                    android:textColor="@color/black"/>
+
+                <com.android.orangetravel.ui.widgets.view.SeparatorPhoneEditView
+                    android:layout_width="match_parent"
+                    android:id="@+id/input_phone_login"
+                    android:hint="请输入手机号码"
+                    android:layout_marginLeft="@dimen/space_20dp"
+                    android:inputType="phone"
+                    android:background="@color/white"
+                    android:textSize="@dimen/font_size_16sp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/view_liner_05dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:layout_height="@dimen/space_30dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/space_5dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatEditText android:id="@+id/input_pwd"
+                    android:layout_width="@dimen/space_0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/font_size_16sp"
+                    android:hint="请输入密码"/>
+
+                <LinearLayout android:id="@+id/right_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                <ImageView android:id="@+id/show_pwd"
+                    android:layout_width="@dimen/space_20dp"
+                    android:layout_height="@dimen/space_20dp"
+                    android:src="@mipmap/show_pwd"/>
+
+                <View
+                    android:layout_width="@dimen/space_0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/space_2dp"
+                    android:layout_marginBottom="@dimen/space_2dp"
+                    android:layout_marginLeft="@dimen/space_10dp"
+                    android:layout_marginRight="@dimen/space_10dp"
+                    android:background="@color/line_light_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="忘记密码"/>
+                </LinearLayout>
+
+                <TextView android:id="@+id/get_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="获取验证码"
+                    android:visibility="gone"
+                    android:paddingLeft="@dimen/space_10dp"
+                    android:paddingRight="@dimen/space_10dp"
+                    android:paddingTop="@dimen/space_4dp"
+                    android:paddingBottom="@dimen/space_4dp"
+                    android:textSize="@dimen/font_size_12sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/shape_ellipse_green_20dp"/>
+            </LinearLayout>
+
+            <include layout="@layout/view_liner_05dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/space_10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/check_theme"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_5dp"
+                    android:text="同意"/>
+
+                <TextView android:id="@+id/legalprovisions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_5dp"
+                    android:textColor="@color/theme_color"
+                    android:text="《法律条款与平台规则》"/>
+
+            </LinearLayout>
+
+            <TextView android:id="@+id/login_btn"
+               style="@style/ThemeColorBorderBanRadiusBtn"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:text="登录"/>
+
+            <TextView android:id="@+id/login_type"
+                android:layout_width="match_parent"
+                android:gravity="left"
+                android:layout_height="wrap_content"
+                android:text="短信验证码登录"
+                android:textColor="@color/light_black"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

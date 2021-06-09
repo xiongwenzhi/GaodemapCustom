@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+    <include layout="@layout/common_title_bar_theme" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:orientation="vertical"
+        android:padding="@dimen/space_10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加紧急联系人"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_22sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:text="添加紧急联系人后，当您使用110报警功能时，行程信息会通过
+添加紧急联系人后，当您使用110报警功能时，行程信息会通过短信自动分享给紧急联系人。紧急情况下，紧急联系人可致电安
+短信自动分享给紧急联系人.紧急情况下，紧急联系人可致电安橙客服确认您的行程信息(目前仅支持号码归属地为中国大陆地区的手机号码)"
+            android:textColor="@color/gray1"
+            android:textSize="@dimen/font_size_13sp" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/EmergencyList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/add_emergency"
+            android:layout_width="wrap_content"
+            android:drawablePadding="@dimen/space_20dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:padding="@dimen/space_10dp"
+            android:drawableLeft="@mipmap/emergency_add"
+            android:text="新增紧急联系人"/>
+
+
+
+        <LinearLayout android:id="@+id/input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+
+            <EditText android:id="@+id/input_emergency_name"
+                android:layout_width="match_parent"
+                android:hint="请输入紧急联系人姓名"
+                android:background="@null"
+                android:drawableLeft="@mipmap/dsl_profile"
+                android:drawablePadding="@dimen/space_20dp"
+                android:layout_marginTop="@dimen/space_30dp"
+                android:layout_marginLeft="@dimen/space_10dp"
+                android:layout_marginRight="@dimen/space_10dp"
+                android:textSize="@dimen/font_size_16sp"
+                android:layout_marginBottom="@dimen/space_10dp"
+                android:layout_height="wrap_content"/>
+
+
+        <include layout="@layout/view_liner_05dp"/>
+
+        <EditText android:id="@+id/input_emergency_phone"
+            android:layout_width="match_parent"
+            android:hint="请输入紧急联系人电话"
+            android:background="@null"
+            android:drawableLeft="@mipmap/dsl_phone"
+            android:drawablePadding="@dimen/space_20dp"
+            android:layout_marginTop="@dimen/space_30dp"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:layout_marginRight="@dimen/space_10dp"
+            android:inputType="phone"
+            android:textSize="@dimen/font_size_16sp"
+            android:layout_marginBottom="@dimen/space_10dp"
+            android:layout_height="wrap_content"/>
+
+        <include layout="@layout/view_liner_05dp"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/emergency_btn"
+            style="@style/ThemeColorBorderRadiusBtn"
+            android:layout_marginBottom="@dimen/space_0dp"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:layout_marginRight="@dimen/space_10dp"
+            android:layout_marginTop="@dimen/space_40dp"
+            android:textColor="@color/white"
+            android:text="添加联系人" />
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

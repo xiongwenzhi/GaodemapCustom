@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wrap_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.yang.base.widgets.photopicker.widgets.SquareImageView
+        android:id="@+id/imageview_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray3"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/checkmark"
+        android:layout_width="@dimen/space_20dp"
+        android:layout_height="@dimen/space_20dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/space_5dp"
+        android:layout_marginTop="@dimen/space_5dp"
+        android:src="@drawable/photo_btn_select_selector" />
+
+</FrameLayout>

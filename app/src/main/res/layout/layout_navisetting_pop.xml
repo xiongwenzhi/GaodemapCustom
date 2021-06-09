@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_round"
+    android:id="@+id/navi_setting_layout"
+    android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:text="取消"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_15sp" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_20dp"
+        android:paddingTop="@dimen/space_20dp"
+        android:paddingBottom="@dimen/space_20dp">
+
+        <LinearLayout
+            android:layout_width="@dimen/space_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/lukuang_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/lk_check_day" />
+
+            <TextView android:id="@+id/lukuang_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="路况" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="@dimen/space_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView android:id="@+id/nav_vocie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/voice_check_day" />
+
+            <TextView android:id="@+id/voice_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="导航声音" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/space_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView android:id="@+id/fangxiang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/dht_navisetting_follow_head" />
+
+            <TextView android:id="@+id/fangxiang_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跟随车头" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView android:id="@+id/navi_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/grey_shape_8"
+        android:textColor="@color/black"
+        android:paddingTop="@dimen/space_8dp"
+        android:paddingBottom="@dimen/space_8dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="@dimen/space_30dp"
+        android:paddingRight="@dimen/space_30dp"
+        android:layout_marginBottom="@dimen/space_10dp"
+        android:text="导航设置"/>
+
+
+
+
+</LinearLayout>
+
+
+
+
+
+

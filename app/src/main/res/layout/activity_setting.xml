@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/common_title_bar_theme"/>
+
+    <TextView
+        android:id="@+id/accountsecurity"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:drawableRight="@mipmap/profile_arror"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:text="账号与安全"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14sp" />
+
+    <TextView android:id="@+id/emergency_contact"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:drawableRight="@mipmap/profile_arror"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:text="紧急联系人"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:drawableRight="@mipmap/profile_arror"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:text="银行卡"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14sp" />
+
+    <TextView android:id="@+id/navigation_setting"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:drawableRight="@mipmap/profile_arror"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:text="导航设置"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14sp" />
+
+    <include layout="@layout/view_liner_05dp"/>
+    <TextView android:id="@+id/update_version"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:drawableRight="@mipmap/profile_arror"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:text="更新版本"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14sp" />
+    <TextView android:id="@+id/contactus"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:drawableRight="@mipmap/profile_arror"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:text="联系我们"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14sp" />
+
+    <include layout="@layout/view_liner_05dp"/>
+    <TextView android:id="@+id/about_us"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:drawableRight="@mipmap/profile_arror"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:text="关于"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14sp" />
+
+
+    <TextView android:id="@+id/loginOut"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:text="退出"
+        android:textColor="@color/theme_color"
+        android:textSize="@dimen/font_size_14sp" />
+
+
+</LinearLayout>

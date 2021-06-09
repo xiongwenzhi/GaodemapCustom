@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/space_10dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <ImageView android:id="@+id/traffic_image"
+        android:layout_width="@dimen/space_70dp"
+        android:layout_height="@dimen/space_70dp"
+        android:src="@mipmap/yongdu_day"/>
+
+    <TextView android:id="@+id/traffic_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="@dimen/space_12dp"
+        android:paddingRight="@dimen/space_12dp"
+        android:paddingTop="@dimen/space_2dp"
+        android:paddingBottom="@dimen/space_2dp"
+        android:textColor="@color/black"
+        android:text="删除"/>
+
+
+
+</LinearLayout>

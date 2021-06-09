@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8dp"
+        android:layout_marginRight="@dimen/space_8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/choose_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/adapter_gridview_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_70dp"
+                android:background="@color/layout_gray_bg"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/grid_two_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/theme_color"
+                android:gravity="center"
+                android:padding="@dimen/space_2dp"
+                android:text="全景图"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_12sp" />
+
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/inputgrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_5dp"
+            android:background="@drawable/add_goods_input"
+            android:maxLines="2"
+            android:minHeight="@dimen/space_30dp"
+            android:padding="@dimen/space_5dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_11sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/adapter_gridview_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:layout_width="@dimen/space_20dp"
+            android:layout_height="@dimen/space_20dp"
+            android:background="@mipmap/photopicker_delete" />
+
+    </LinearLayout>
+
+</RelativeLayout>

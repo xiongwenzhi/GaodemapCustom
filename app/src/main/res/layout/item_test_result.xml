@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/space_15dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:text="账号状态异常"/>
+
+        <TextView android:id="@+id/tips"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_black"
+            android:text="您的账号已暂停服务，请联系客服"/>
+
+    </LinearLayout>
+
+
+    <TextView android:id="@+id/kefu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:paddingTop="@dimen/space_5dp"
+        android:paddingBottom="@dimen/space_5dp"
+        android:textColor="@color/theme_color"
+        android:background="@drawable/border_theme_1"
+        android:text="联系客服"/>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,149 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.android.orangetravel"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions { //AndroidStudio3.0 +的时候butter knife报错
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+        // 64K
+        multiDexEnabled true
+
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+    }
+
+    signingConfigs {
+        config {
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
+            storeFile file(STORE_FILE)
+            storePassword STORE_PASSWORD
+        }
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            ndk {
+                abiFilters 'armeabi-v7a'
+            }
+            signingConfig signingConfigs.config
+            minifyEnabled false
+            shrinkResources false
+        }
+        debug {
+            ndk {
+                //这里要加上，否则debug包会出问题,后面三个为可选，x86建议加上不然部分模拟器回报错
+//                abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86"
+                abiFilters 'armeabi-v7a'
+            }
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.config
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    applicationVariants.all { variant ->
+        // Apk 输出文件名配置
+        variant.outputs.all { output ->
+            outputFileName = rootProject.getName() + '_v' + variant.versionName + '_' + variant.buildType.name
+            if (variant.buildType.name == buildTypes.release.getName()) {
+                outputFileName += '_' + new Date().format('MMdd')
+            }
+            outputFileName += '.apk'
+        }
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation project(path: ':pickerview')
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation project(':base')
+    implementation project(':MPChartLib')
+    implementation project(':citypicker')
+    // 图片选择器
+//    implementation project(':picture_library')
+    // 下拉刷新上拉加载
+//    implementation 'com.scwang.smart.refresh:SmartRefreshLayout:2.0.3'
+    implementation  'com.scwang.smart:refresh-layout-kernel:2.0.3'      //核心必须依赖
+    implementation  'com.scwang.smart:refresh-header-classics:2.0.3'    //经典刷新头
+    // ButterKnife
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    implementation 'com.tencent.tbs.tbssdk:sdk:43939'
+    //底部弹出框
+    implementation 'com.lxj:xpopup:2.2.10'
+//     EventBus
+    implementation files('libs/eventbus-3.1.1.jar')
+//     Retrofit
+    implementation files('libs/retrofit/retrofit-2.3.0.jar')
+    implementation files('libs/retrofit/converter-gson-2.3.0.jar')
+    implementation files('libs/retrofit/adapter-rxjava2-2.3.0.jar')
+//     Gson
+    implementation files('libs/gson-2.7.jar')
+    // OkHttp
+    implementation files('libs/okhttp-3.10.0.jar')
+    implementation files('libs/okio-1.14.0.jar')
+
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //高德地图
+//    implementation 'com.amap.api:3dmap:latest.integration'
+    implementation 'com.amap.api:location:latest.integration'
+
+    implementation 'com.amap.api:search:latest.integration'
+    implementation 'com.amap.api:navi-3dmap:latest.integration'
+
+    implementation 'com.hjq:titlebar:8.2'
+
+    // RxJava
+    implementation files('libs/rxjava-2.0.1.jar')
+    implementation files('libs/rxandroid-2.0.1.jar')
+    // 异步流处理标准
+    compile files('libs/reactive-streams-1.0.0.jar')
+
+    implementation 'com.github.youlookwhat:WebProgress:1.2.0'
+    implementation 'com.superluo:textbannerview:1.0.5'  //最新版本
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    implementation 'com.github.xiaofeidev:round:1.1.1'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.github.florent37:viewanimator:1.0.0@aar'
+    implementation 'com.teprinciple:updateapputils:2.3.0'
+//    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.6.0'
+    implementation("com.github.LuckSiege.PictureSelector:picture_library:v2.6.0") {
+        exclude group: 'com.squareup.okio', module: 'okio'
+
+    }
+
+
+}

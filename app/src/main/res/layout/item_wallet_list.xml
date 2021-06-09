@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:paddingTop="@dimen/space_5dp"
+        android:paddingBottom="@dimen/space_5dp"
+        android:background="#f4f5f7"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/date_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2021年01月05日"
+            android:textColor="@color/colorIcon"/>
+
+        <TextView android:id="@+id/all_money_wallet"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorIcon"
+            android:text="合计：-8761.2元"/>
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/wallet__details_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+</LinearLayout>

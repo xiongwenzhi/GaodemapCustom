@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_black">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/act_show_larger_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<com.yang.base.widgets.StatusBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dialog_black_bj_color" />-->
+
+    <TextView
+        android:id="@+id/act_show_larger_count"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/space_40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/space_10dp"
+        android:background="@drawable/act_show_larger_bj"
+        android:gravity="center"
+        android:minWidth="@dimen/space_40dp"
+        android:text="0/0"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_14sp" />
+
+</RelativeLayout>

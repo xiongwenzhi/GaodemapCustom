@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <include layout="@layout/common_title_bar_theme" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_10dp">
+
+        <View
+            android:layout_width="@dimen/space_3dp"
+            android:layout_height="@dimen/space_10dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:text="行驶证"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/space_10dp"
+        android:layout_marginBottom="@dimen/space_10dp"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+
+        <LinearLayout android:id="@+id/driving_front"
+            android:layout_width="@dimen/space_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+<!--                <ImageView android:id="@+id/image_one"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/space_100dp"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@mipmap/car_license_one" />-->
+
+
+<!--                <com.android.orangetravel.ui.widgets.view.XCRoundRectImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:id="@+id/image_one"-->
+<!--                    android:src="@mipmap/car_license_two"-->
+<!--                    android:layout_height="@dimen/space_100dp"-->
+<!--                    />-->
+
+                <com.github.xiaofeidev.round.RoundImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/image_one"
+                    android:src="@mipmap/car_license_two"
+                    android:layout_height="@dimen/space_100dp"
+                    app:borderRadius="@dimen/space_5dp"
+                    app:rd_radius="@dimen/space_15dp"
+                    android:scaleType="fitXY" />
+
+
+                <View android:id="@+id/car_lic_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_100dp"
+                    android:background="@drawable/grey_66_shape_8"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/space_30dp"
+                        android:layout_height="@dimen/space_30dp"
+                        android:src="@mipmap/icon_camera"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上传行驶证正面"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+        <LinearLayout android:id="@+id/driving_reverse"
+            android:layout_width="@dimen/space_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/space_20dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <com.github.xiaofeidev.round.RoundImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/image_two"
+                    android:src="@mipmap/car_license_two"
+                    android:layout_height="@dimen/space_100dp"
+                    app:borderRadius="@dimen/space_5dp"
+                    app:rd_radius="@dimen/space_15dp"
+                    android:scaleType="fitXY"
+                    />
+
+<!--                <com.android.orangetravel.ui.widgets.view.XCRoundRectImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:id="@+id/image_two"-->
+<!--                    android:src="@mipmap/car_license_two"-->
+<!--                    android:layout_height="@dimen/space_100dp"-->
+<!--                  />-->
+
+
+                <View android:id="@+id/car_lic_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_100dp"
+                    android:background="@drawable/grey_66_shape_8"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/space_30dp"
+                        android:layout_height="@dimen/space_30dp"
+                        android:src="@mipmap/icon_camera"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上传行驶证反面"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/view_liner_10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_10dp">
+
+        <View
+            android:layout_width="@dimen/space_3dp"
+            android:layout_height="@dimen/space_10dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:text="车辆外观"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/space_10dp"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+
+        <LinearLayout android:id="@+id/image_three"
+            android:layout_width="@dimen/space_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <com.github.xiaofeidev.round.RoundImageView
+                    android:id="@+id/car_test"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_100dp"
+                    app:borderRadius="@dimen/space_5dp"
+                    app:rd_radius="@dimen/space_15dp"
+                    android:scaleType="fitXY" />
+
+                <View android:id="@+id/car_lic_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_100dp"
+                    android:background="@drawable/grey_66_shape_8"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/space_30dp"
+                        android:layout_height="@dimen/space_30dp"
+                        android:src="@mipmap/icon_camera"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上传车辆外观"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="@dimen/space_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:layout_marginLeft="@dimen/space_20dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_120dp"
+                    android:src="@mipmap/car_license_two" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_120dp"
+                    android:background="@drawable/grey_66_shape_8"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/space_30dp"
+                        android:layout_height="@dimen/space_30dp"
+                        android:src="@mipmap/icon_camera"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上传行驶证反面"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <RelativeLayout android:id="@+id/choose_car_color"
+        android:layout_width="match_parent"
+        android:padding="@dimen/space_10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车辆颜色"/>
+
+        <TextView android:id="@+id/car_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/theme_color"
+            android:text="请选择>"/>
+
+    </RelativeLayout>
+
+
+    <include layout="@layout/view_liner_10dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_10dp">
+
+        <View
+            android:layout_width="@dimen/space_3dp"
+            android:layout_height="@dimen/space_10dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:text="其他信息"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_black"
+            android:text="服务公司"/>
+
+        <EditText
+            android:id="@+id/czr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:hint="请输入服务公司或承租人"
+            android:maxLines="1"
+            android:textColor="@color/cp_color_gray_dark"
+            android:textColorHint="@color/cp_color_gray_light"
+            android:textSize="@dimen/cp_search_text_size" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_black"
+            android:text="车主姓名"/>
+
+        <EditText
+            android:id="@+id/car_Phople_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:hint="请输入车主姓名"
+            android:maxLines="1"
+            android:textColor="@color/cp_color_gray_dark"
+            android:textColorHint="@color/cp_color_gray_light"
+            android:textSize="@dimen/cp_search_text_size" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_black"
+            android:text="车辆所在地"/>
+
+        <EditText
+            android:id="@+id/car_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:hint="请输入车辆所在地"
+            android:maxLines="1"
+            android:textColor="@color/cp_color_gray_dark"
+            android:textColorHint="@color/cp_color_gray_light"
+            android:textSize="@dimen/cp_search_text_size" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_black"
+            android:text="爱车名称"/>
+
+        <EditText
+            android:id="@+id/car_Carname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:hint="请输入爱车名称"
+            android:maxLines="1"
+            android:textColor="@color/cp_color_gray_dark"
+            android:textColorHint="@color/cp_color_gray_light"
+            android:textSize="@dimen/cp_search_text_size" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_black"
+            android:text="车辆品牌"/>
+
+        <EditText
+            android:id="@+id/car_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:hint="请输入车辆品牌"
+            android:gravity="right"
+            android:maxLines="1"
+            android:textColor="@color/cp_color_gray_dark"
+            android:textColorHint="@color/cp_color_gray_light"
+            android:textSize="@dimen/cp_search_text_size" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_black"
+            android:text="车牌号"/>
+
+        <EditText
+            android:id="@+id/plateNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:hint="请输入车牌号"
+            android:maxLines="1"
+            android:gravity="right"
+            android:textColor="@color/cp_color_gray_dark"
+            android:textColorHint="@color/cp_color_gray_light"
+            android:textSize="@dimen/cp_search_text_size" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_black"
+            android:text="车辆VIN码"/>
+
+        <EditText
+            android:id="@+id/car_vin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:hint="请输入车辆VIN码"
+            android:maxLines="1"
+            android:textColor="@color/cp_color_gray_dark"
+            android:textColorHint="@color/cp_color_gray_light"
+            android:textSize="@dimen/cp_search_text_size" />
+
+    </RelativeLayout>
+
+    <include  layout="@layout/view_liner_05dp"/>
+
+    <RelativeLayout android:id="@+id/addCar_choose_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_black"
+            android:text="车辆注册日期"/>
+
+        <TextView android:id="@+id/add_car_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:text="请选择 >"
+            android:maxLines="1"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/cp_search_text_size" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:id="@+id/add_car"
+        style="@style/ThemeColorBorderRadiusBtn"
+        android:layout_marginLeft="@dimen/space_20dp"
+        android:layout_marginRight="@dimen/space_20dp"
+        android:layout_marginBottom="@dimen/space_20dp"
+        android:text="提交" />
+
+
+
+
+
+</LinearLayout>

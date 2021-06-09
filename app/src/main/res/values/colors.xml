@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="drive_center">#fe6d3c</color>
+    <color name="drive_end">#fe894f</color>
+    <color name="black5">#0D000000</color>
+    <!-- 按钮按压时的颜色 -->
+    <color name="colorButtonPressed">#AA5A8DDF</color>
+    <!-- 按钮禁用时的颜色 -->
+    <color name="colorButtonDisable">#BBBBBB</color>
+    <!-- 分割线的颜色 -->
+    <color name="colorLine">#ECECEC</color>
+    <!-- 图标颜色 -->
+    <color name="colorIcon">#7C7C7C</color>
+
+    <!-- 对话框确认按钮文本颜色 -->
+    <color name="colorConfirm">#007AFF</color>
+    <!-- 对话框取消按钮文本颜色 -->
+    <color name="colorCancel">#000</color>
+    <color name="c424a5e">#58ba2d</color>
+    <color name="title_bar_black">#58ba2d</color>
+    <color name="index_location_reset_bg">#eff3f6</color>
+    <color name="index_floww_water_color">#fedeb6</color>
+    <color name="cfdf8f4">#fdf8f4</color>
+    <!--灰色背景-->
+    <color name="ceee">#eeeeee</color>
+    <color name="cblue">#388cf0</color>
+    <color name="cdad9d7">#dad9d7</color>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--刷新-->
+    <item name="mSmartRefreshLayout" type="id" />
+    <item name="mRefreshView" type="id" />
+    <item name="pull_empty_layout" type="id" />
+    <item name="pull_empty_tv" type="id" />
+    <item name="pull_empty_img" type="id" />
+
+    <!--标题栏-->
+    <item name="id_title_bar" type="id" />
+    <item name="id_status_bar_view" type="id" />
+    <item name="id_image_back" type="id" />
+    <item name="id_tv_title" type="id" />
+    <item name="id_image_right_icon" type="id" />
+    <item name="id_tv_right_text" type="id" />
+
+    <!--设置ImageView的Tag-->
+    <item name="glide_img_tag" type="id" />
+
+</resources>

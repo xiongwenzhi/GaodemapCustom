@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:padding="@dimen/space_10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_bg_white_5dp"
+            android:orientation="vertical">
+
+            <com.android.orangetravel.base.widgets.ListViewScroll
+                android:id="@+id/dialog_common_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:listSelector="@android:color/transparent" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/dialog_common_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45dp"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:background="@drawable/common_bg_white_5dp"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/font_size_16sp" />
+
+</LinearLayout>

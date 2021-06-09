@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/space_10dp"
+    android:background="@color/white">
+
+    <ImageView android:id="@+id/bank_img"
+        android:layout_width="@dimen/space_30dp"
+        android:scaleType="fitXY"
+        android:layout_height="@dimen/space_30dp" />
+
+
+        <TextView android:id="@+id/bank_name"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/space_20dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorIcon"
+            android:text=""/>
+
+
+
+
+
+
+
+
+</LinearLayout>
+

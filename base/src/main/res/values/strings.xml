@@ -1,0 +1,33 @@
+<resources>
+
+    <string name="app_name">Base</string>
+
+    <!--数据请求-->
+    <string name="loading">请稍后...</string>
+    <string name="data_is_empty">数据空空如也~</string>
+    <!---->
+    <string name="merchant_order_null">您暂时还没有交易信息哦~</string>
+    <string name="user_order_null">您暂时还没有订单哦~</string>
+    <string name="collect_null">您还没有添加收藏哦~</string>
+    <string name="evaluate_null">暂时还没有评价哦~</string>
+    <string name="search_null">暂时还没有相关内容哦~</string>
+    <string name="message_null">您还没有消息哦~</string>
+    <string name="coupone_uncollected">您还未领取优惠券</string>
+    <string name="coupone_userd">暂无已使用的优惠券</string>
+    <string name="coupone_expired">暂无已过期的优惠券</string>
+    <string name="purchase_order_null">您还没有采购单哦~</string>
+    <string name="quote_order_null">您还没有报价单哦~</string>
+    <string name="account_detail_null">暂时还没有明细哦~</string>
+    <string name="goods_list_null">还没有商品哦~</string>
+    <!--<string name="service_list_null">还没有服务哦~</string>-->
+    <string name="college_list_null">暂时还没有内容哦~</string>
+    <string name="no_business">暂时还没有内容哦~</string>
+
+    <!--图片选择-->
+    <string name="photos_num">%1$d张</string>
+    <string name="msg_no_camera">没找到摄像头</string>
+    <string name="msg_maxi_capacity">已达到照片选择上限</string>
+    <string name="commit">确定</string>
+    <string name="commit_num">确定(%1$d/%2$d)</string>
+
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <!--ViewPager指示器下划线的高度-->
+    <dimen name="tab_line_height">1.5dp</dimen>
+</resources>

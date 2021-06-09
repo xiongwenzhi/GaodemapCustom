@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.amap.api.navi.AMapNaviView
+            android:id="@+id/navi_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/navi_sdk_autonavi_port_leftwidget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/navi_green_bg"
+                android:gravity="center_vertical"
+                android:minHeight="100dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:orientation="horizontal">
+
+                    <com.amap.api.navi.view.NextTurnTipView
+                        android:id="@+id/icon_next_turn_tip"
+                        android:layout_width="50.0dip"
+                        android:layout_height="60.0dip"
+                        android:layout_gravity="center_vertical" />
+
+                    <!--左右转向的图标-->
+                    <LinearLayout
+                        android:layout_width="@dimen/space_0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <!--剩余的公里数-->
+                            <TextView
+                                android:id="@+id/text_next_road_distance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dip"
+                                android:textColor="@color/white"
+                                android:textSize="30.0sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:gravity="left|center_vertical"
+                                android:text="米"
+                                android:textColor="@color/white"
+                                android:textSize="16.0sp" />
+
+                            <!--组件： 进入-->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center_vertical"
+                                android:text="进入"
+                                android:textColor="@color/white"
+                                android:textSize="16.0sp" />
+                        </LinearLayout>
+
+                        <!--组件： 下一路路名-->
+                        <TextView
+                            android:id="@+id/text_next_road_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="20.0sp" />
+                    </LinearLayout>
+
+                    <ImageView android:id="@+id/close_navi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/card_close_image"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="剩余" />
+                        <TextView android:id="@+id/RetainDistance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                             />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="预计" />
+                        <TextView android:id="@+id/RetainTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.android.orangetravel.ui.widgets.view.DriveWayLinear
+                android:id="@+id/myDriveWayView"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout android:id="@+id/speed_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/speed_blue"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="3dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/speed_white"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <TextView android:id="@+id/speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:textColor="@color/cblue"
+                        />
+                    <TextView android:id="@+id/speed_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="km/h"
+                        android:textSize="12sp"
+                        android:textColor="@color/cblue"
+                        />
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/navigation_layout"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:layout_marginLeft="@dimen/space_10dp"
+                app:cardCornerRadius="@dimen/space_5dp"
+                android:elevation="@dimen/space_10dp"
+                android:padding="@dimen/space_10dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/shangbao_nav"
+                    android:layout_width="@dimen/space_35dp"
+                    android:layout_height="@dimen/space_35dp"
+                    android:src="@mipmap/dmk_fullscreen_trafficreport_day"
+                   />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <com.amap.api.navi.view.TrafficProgressBar
+            android:id="@+id/myTrafficBar"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_marginRight="40dp"
+            android:layout_gravity="right|center_vertical"
+           />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_gravity="bottom">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="安橙地图"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/setting_nav"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/space_20dp"
+                    android:layout_marginLeft="@dimen/space_10dp"
+                    app:cardCornerRadius="@dimen/space_5dp"
+                    android:elevation="@dimen/space_10dp"
+                    android:padding="@dimen/space_10dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView android:id="@+id/setting_img_nav"
+                        android:layout_width="@dimen/space_35dp"
+                        android:layout_height="@dimen/space_35dp"
+                        android:src="@mipmap/dmk_fullscreen_setting_day"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/quanlan"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/space_20dp"
+                    android:layout_marginLeft="@dimen/space_10dp"
+                    app:cardCornerRadius="@dimen/space_5dp"
+                    android:elevation="@dimen/space_10dp"
+                    android:padding="@dimen/space_10dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView android:id="@+id/quanlan_nav"
+                        android:layout_width="@dimen/space_35dp"
+                        android:layout_height="@dimen/space_35dp"
+                        android:src="@mipmap/dmk_fullscreen_overview_day"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+</LinearLayout>

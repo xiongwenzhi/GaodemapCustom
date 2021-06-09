@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+    <include layout="@layout/common_title_bar_theme" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_margin="@dimen/space_10dp"
+        app:cardCornerRadius="@dimen/space_8dp"
+        app:cardElevation="1dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/space_20dp"
+            android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/space_15dp"
+            android:orientation="horizontal">
+
+            <com.android.orangetravel.base.widgets.CircleImageView
+               android:id="@+id/head_icon"
+                android:layout_width="@dimen/space_40dp"
+                android:layout_height="@dimen/space_40dp"
+                android:src="@mipmap/app_logo"/>
+
+            <TextView android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/space_20dp"
+                android:textSize="@dimen/font_size_16sp"
+                android:text="小熊熊"/>
+
+        </LinearLayout>
+
+        <ImageView android:id="@+id/qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_300dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/qrcode" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

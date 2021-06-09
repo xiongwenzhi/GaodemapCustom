@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/trafficreport_layout"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_dismiss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_10dp"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:text="取消"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_15sp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/traffic_report_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
+
+
+
+
+
+

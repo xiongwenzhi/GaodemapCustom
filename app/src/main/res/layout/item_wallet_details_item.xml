@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/space_10dp"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/title_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提现"
+            android:textColor="@color/black"/>
+
+        <TextView android:id="@+id/only_money_wallet"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="合计：-8761.2元"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

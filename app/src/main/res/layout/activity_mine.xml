@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#fafbff"
+    android:layout_height="match_parent">
+
+    <com.android.orangetravel.base.widgets.StatusBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.android.orangetravel.ui.widgets.view.CustomScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/space_150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/x_profile_back_image"/>
+
+                        <LinearLayout
+                            android:id="@+id/top_bar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:padding="@dimen/space_10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView android:id="@+id/mine_back_black"
+                                    android:layout_width="@dimen/space_40dp"
+                                    android:layout_height="wrap_content"
+                                   android:padding="@dimen/space_10dp"
+                                    android:src="@mipmap/left_back"/>
+
+                                <ImageView android:id="@+id/setting"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="@dimen/space_10dp"
+                                    android:src="@mipmap/profile_settingiphone"/>
+
+                            </RelativeLayout>
+
+                            <LinearLayout android:id="@+id/personal_homePage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/space_10dp"
+                                android:orientation="horizontal">
+
+
+                                <com.android.orangetravel.base.widgets.CircleImageView
+                                    android:id="@+id/frg_mine_header"
+                                    android:layout_width="@dimen/space_70dp"
+                                    android:layout_height="@dimen/space_70dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@mipmap/default_avatar"
+                                    app:border_color="@color/white"
+                                    />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/space_10dp"
+                                    android:orientation="vertical">
+
+                                    <TextView android:id="@+id/username"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawablePadding="@dimen/space_10dp"
+                                        android:drawableEnd="@mipmap/profile_editor"
+                                        android:textSize="@dimen/font_size_15sp"
+                                        android:textColor="@color/black"
+                                        android:text=""/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/gray"
+                                        android:textSize="@dimen/font_size_12sp"
+                                        android:text="点击进入个人主页"/>
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:scaleType="fitStart"
+                                        android:layout_marginTop="@dimen/space_2dp"
+                                        android:layout_height="@dimen/space_15dp"
+                                        android:src="@mipmap/car_validation"/>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+                <!--常用功能-->
+                <com.android.orangetravel.base.widgets.GridViewScroll
+                    android:id="@+id/menu_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:nestedScrollingEnabled="false"
+                    android:numColumns="4"
+                    android:verticalSpacing="@dimen/space_20dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/grey_shape_8"
+                    android:padding="@dimen/space_10dp"
+                    android:layout_margin="@dimen/space_10dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content">
+
+                    <ImageView android:id="@+id/laba"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/x_profile_dmchorn"/>
+
+
+                    <com.superluo.textbannerlibrary.TextBannerView
+                        android:id="@+id/tv_banner"
+                        android:layout_marginLeft="@dimen/space_5dp"
+                        android:layout_width="@dimen/space_0dp"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/space_20dp"
+                        app:setGravity="left"
+                        app:setSingleLine="true"
+                        android:layout_toRightOf="@+id/laba"
+                        app:setDirection="bottom_to_top"
+                        app:setTextColor="@color/gray"/>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@+id/tv_banner"
+                        android:src="@mipmap/x_profile_arrow"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/activity_bg"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="@dimen/space_8dp"
+                        app:cardElevation="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/space_10dp"
+                                android:textColor="@color/black"
+                                android:text="我的工具"/>
+
+                            <include layout="@layout/view_liner_05dp"/>
+
+
+                            <!--我的工具-->
+                            <com.android.orangetravel.base.widgets.GridViewScroll
+                                android:id="@+id/CommonlyList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/space_10dp"
+                                android:paddingTop="@dimen/space_10dp"
+                                android:paddingBottom="@dimen/space_10dp"
+                                android:focusable="false"
+                                android:nestedScrollingEnabled="false"
+                                android:numColumns="4"
+                                android:verticalSpacing="@dimen/space_30dp" />
+                        </LinearLayout>
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/space_10dp"
+                        android:text="推荐活动"/>
+
+
+                    <com.android.orangetravel.base.widgets.ListViewScroll
+                        android:id="@+id/activity_list"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="@dimen/space_10dp"
+                        android:layout_marginRight="@dimen/space_10dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+                <com.android.orangetravel.base.widgets.GridViewScroll
+                    android:id="@+id/buyGoods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_10dp"
+                    android:layout_marginRight="@dimen/space_10dp"
+                    android:horizontalSpacing="@dimen/space_5dp"
+                    android:nestedScrollingEnabled="false"
+                    android:numColumns="2"
+                    android:verticalSpacing="@dimen/space_5dp" />
+
+            </LinearLayout>
+        </com.android.orangetravel.ui.widgets.view.CustomScrollView>
+
+        <FrameLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout android:id="@+id/layout_title"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/space_20dp"
+                android:visibility="gone"
+                android:paddingRight="@dimen/space_20dp"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <ImageView android:id="@+id/mine_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/report_back_white"/>
+                <TextView
+                    android:id="@+id/integral_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="个人中心"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_18sp" />
+
+                <ImageView android:id="@+id/setting_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/profile_setting_white"/>
+
+
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/jsy_car"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/space_5dp"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/space_10dp"
+        android:layout_marginLeft="@dimen/space_10dp"
+        android:layout_marginRight="@dimen/space_10dp"
+        app:cardCornerRadius="@dimen/space_5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/space_10dp"
+                android:paddingTop="@dimen/space_20dp"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/space_10dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="@dimen/space_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="网约车驾驶员证"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_20sp"
+                        android:textStyle="bold" />
+
+                    <TextView android:id="@+id/tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_5dp"
+                        android:text="上传证书到安橙平台，享受合规权益保障"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/font_size_14sp"
+                        />
+                </LinearLayout>
+
+                <TextView android:id="@+id/upload_driver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="@dimen/space_20dp"
+                    android:text="去上传"
+                    android:padding="@dimen/space_5dp"
+                    android:background="@drawable/theme_bg_5"
+                    android:drawablePadding="@dimen/space_10dp"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout android:id="@+id/guide_layout"
+                android:layout_width="match_parent"
+                android:padding="@dimen/space_10dp"
+                android:layout_marginTop="@dimen/space_10dp"
+                android:background="@color/activity_bg"
+                android:layout_height="wrap_content">
+
+                <TextView android:id="@+id/guide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#5a6c98"
+                    android:text="查看网约车驾驶员证办理引导"/>
+
+                <ImageView android:id="@+id/image_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/rightarrow"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+        </LinearLayout>

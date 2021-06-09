@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--标题栏高度-->
+    <dimen name="title_bar_height">45dp</dimen>
+    <!--Z轴海拔-->
+    <dimen name="elevation_height">2dp</dimen>
+
+    <!--dp-->
+    <dimen name="space_0dp">0dp</dimen>
+    <dimen name="space_0.5dp">0.5dp</dimen>
+    <dimen name="space_1dp">1dp</dimen>
+    <dimen name="space_2dp">2dp</dimen>
+    <dimen name="space_3dp">3dp</dimen>
+    <dimen name="space_4dp">4dp</dimen>
+    <dimen name="space_5dp">5dp</dimen>
+    <dimen name="space_6dp">6dp</dimen>
+    <dimen name="space_7dp">7dp</dimen>
+    <dimen name="space_8dp">8dp</dimen>
+    <dimen name="space_9dp">9dp</dimen>
+    <dimen name="space_10dp">10dp</dimen>
+    <dimen name="space_11dp">11dp</dimen>
+    <dimen name="space_12dp">12dp</dimen>
+    <dimen name="space_13dp">13dp</dimen>
+    <dimen name="space_14dp">14dp</dimen>
+    <dimen name="space_15dp">15dp</dimen>
+    <dimen name="space_18dp">18dp</dimen>
+    <dimen name="space_20dp">20dp</dimen>
+    <dimen name="space_22dp">22dp</dimen>
+    <dimen name="space_24dp">24dp</dimen>
+    <dimen name="space_25dp">25dp</dimen>
+    <dimen name="space_30dp">30dp</dimen>
+    <dimen name="space_35dp">35dp</dimen>
+    <dimen name="space_40dp">40dp</dimen>
+    <dimen name="space_45dp">45dp</dimen>
+    <dimen name="space_50dp">50dp</dimen>
+    <dimen name="space_55dp">55dp</dimen>
+    <dimen name="space_60dp">60dp</dimen>
+    <dimen name="space_65dp">65dp</dimen>
+    <dimen name="space_70dp">70dp</dimen>
+    <dimen name="space_80dp">80dp</dimen>
+    <dimen name="space_90dp">90dp</dimen>
+    <dimen name="space_95dp">95dp</dimen>
+    <dimen name="space_100dp">100dp</dimen>
+    <dimen name="space_105dp">105dp</dimen>
+    <dimen name="space_110dp">110dp</dimen>
+    <dimen name="space_120dp">120dp</dimen>
+    <dimen name="space_130dp">130dp</dimen>
+    <dimen name="space_140dp">140dp</dimen>
+    <dimen name="space_150dp">150dp</dimen>
+    <dimen name="space_160dp">160dp</dimen>
+    <dimen name="space_180dp">180dp</dimen>
+    <dimen name="space_200dp">200dp</dimen>
+    <dimen name="space_220dp">220dp</dimen>
+    <dimen name="space_250dp">250dp</dimen>
+    <dimen name="space_300dp">300dp</dimen>
+    <dimen name="space_320dp">320dp</dimen>
+    <dimen name="space_350dp">350dp</dimen>
+    <dimen name="space_400dp">400dp</dimen>
+    <dimen name="space_500dp">500dp</dimen>
+
+    <!--sp-->
+    <dimen name="font_size_5sp">5sp</dimen>
+    <dimen name="font_size_6sp">6sp</dimen>
+    <dimen name="font_size_7sp">7sp</dimen>
+    <dimen name="font_size_8sp">8sp</dimen>
+    <dimen name="font_size_9spp">9sp</dimen>
+    <dimen name="font_size_10sp">10sp</dimen>
+    <dimen name="font_size_11sp">11sp</dimen>
+    <dimen name="font_size_12sp">12sp</dimen>
+    <dimen name="font_size_13sp">13sp</dimen>
+    <dimen name="font_size_14sp">14sp</dimen>
+    <dimen name="font_size_15sp">15sp</dimen>
+    <dimen name="font_size_16sp">16sp</dimen>
+    <dimen name="font_size_17sp">17sp</dimen>
+    <dimen name="font_size_18sp">18sp</dimen>
+    <dimen name="font_size_19sp">19sp</dimen>
+    <dimen name="font_size_20sp">20sp</dimen>
+    <dimen name="font_size_22sp">22sp</dimen>
+    <dimen name="font_size_24sp">24sp</dimen>
+    <dimen name="font_size_26sp">26sp</dimen>
+    <dimen name="font_size_28sp">28sp</dimen>
+    <dimen name="font_size_30sp">30sp</dimen>
+    <dimen name="font_size_35sp">35sp</dimen>
+    <dimen name="font_size_40sp">40sp</dimen>
+
+</resources>

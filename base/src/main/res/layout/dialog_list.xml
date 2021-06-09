@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_common_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_50dp"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:gravity="center"
+        android:text="标题"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/font_size_16sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.yang.base.widgets.ListViewScroll
+                android:id="@+id/dialog_common_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:listSelector="@android:color/transparent" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/dialog_common_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_50dp"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:gravity="center"
+        android:text="确定"
+        android:background="@color/theme_color"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_16sp" />
+
+</LinearLayout>

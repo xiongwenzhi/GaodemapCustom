@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yang.base.widgets.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/space_8dp"
+        android:layout_marginTop="@dimen/space_8dp">
+
+        <ImageView
+            android:id="@+id/adapter_gridview_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/layout_gray_bg"
+            android:scaleType="centerCrop" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/adapter_gridview_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:layout_width="@dimen/space_20dp"
+            android:layout_height="@dimen/space_20dp"
+            android:background="@mipmap/photopicker_delete" />
+
+    </LinearLayout>
+
+</com.yang.base.widgets.SquareRelativeLayout>

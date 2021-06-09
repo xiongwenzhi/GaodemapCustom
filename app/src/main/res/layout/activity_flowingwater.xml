@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <com.android.orangetravel.base.widgets.StatusBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.android.orangetravel.base.tablayout.SlidingTabLayout
+            android:id="@+id/act_type_list_tab"
+            style="@style/CommonSlidingTabLayout"
+            tl_underline_color="#00ff00"
+            android:paddingLeft="@dimen/space_70dp"
+            android:paddingRight="@dimen/space_70dp"
+            tl_underline_height="2dp"
+            android:layout_gravity="center_horizontal"
+            tl:tl_divider_color="#00ff00"
+            tl:tl_indicator_color="#ff9600"
+            tl:tl_indicator_height="2dp"
+            android:background="@color/white"
+            tl:tl_indicator_width_equal_title="true"
+            tl:tl_textSelectColor="@color/white"
+            tl:tl_textUnselectColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_40dp"
+            tl:tl_tab_space_equal="true" />
+
+        <ImageView android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:src="@drawable/bar_arrows_left_white"/>
+
+
+    </FrameLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_5dp"
+        android:background="@color/title_bar_black"/>
+
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/type_viewpage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

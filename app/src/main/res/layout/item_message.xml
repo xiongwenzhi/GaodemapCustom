@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="@dimen/space_3dp"
+        app:cardElevation="1dp"
+        android:layout_margin="@dimen/space_10dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:paddingTop="@dimen/space_20dp"
+        android:paddingBottom="@dimen/space_20dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+       >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.android.orangetravel.ui.widgets.view.TipView
+            android:id="@+id/msg_is_read"
+            android:layout_width="@dimen/space_4dp"
+            android:layout_height="@dimen/space_4dp"
+            app:tips_circleColor="@color/red"
+            android:layout_alignParentRight="true"
+            app:text="0"
+            app:textColor="@android:color/white"
+            app:textMax="999" />
+
+        <TextView android:id="@+id/title_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今天口碑值为388.3分"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_14sp" />
+
+    </RelativeLayout>
+
+    <TextView android:id="@+id/desc_msg"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:layout_height="wrap_content"
+        android:text="与昨天分数相同，优质服务创造美好出行，请您继续加油~" />
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

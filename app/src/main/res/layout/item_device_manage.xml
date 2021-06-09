@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/space_10dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/name_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_14sp"
+            android:text="施文的iPhone(iPhone)"/>
+
+        <TextView android:id="@+id/login_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2020-10-22-17:36"
+            android:layout_marginTop="@dimen/space_5dp"
+            android:textColor="@color/gray1"
+            android:textSize="@dimen/font_size_12sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="@dimen/space_12dp"
+        android:paddingRight="@dimen/space_12dp"
+        android:paddingTop="@dimen/space_2dp"
+        android:paddingBottom="@dimen/space_2dp"
+        android:textColor="@color/theme_color"
+        android:background="@drawable/border_grey_1"
+        android:text="删除"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+
+   <RelativeLayout
+       android:id="@+id/rl_root"
+       android:background="@drawable/shape_round_normal_theme"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <RelativeLayout
+           android:id="@+id/rl_slide"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <ImageView
+               android:id="@+id/iv_slide"
+               android:scaleType="fitCenter"
+               android:layout_centerVertical="true"
+               android:src="@mipmap/scroll_confirm_arrow"
+               android:layout_width="@dimen/space_30dp"
+               android:layout_height="@dimen/space_30dp"/>
+
+       </RelativeLayout>
+
+       <TextView
+           android:id="@+id/tv_hint"
+           android:textColor="@android:color/white"
+           android:layout_centerInParent="true"
+           android:text="到达上车地点"
+           android:gravity="center"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+       <TextView
+           android:id="@+id/tv_right"
+           android:textColor="@android:color/white"
+           android:layout_alignParentRight="true"
+           android:layout_centerVertical="true"
+           android:layout_marginRight="@dimen/space_20dp"
+           android:gravity="center"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+
+   </RelativeLayout>
+
+</RelativeLayout>

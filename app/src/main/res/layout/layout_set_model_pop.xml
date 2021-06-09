@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_round"
+    android:paddingLeft="@dimen/space_10dp"
+    android:paddingRight="@dimen/space_10dp"
+    android:orientation="vertical">
+
+
+    <com.android.orangetravel.base.widgets.StatusBarView
+        android:id="@+id/id_status_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/trans" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="模式设置"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_18sp"
+            />
+
+        <ImageView android:id="@+id/dismiss_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/card_close_image"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/space_10dp"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预约单"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_20sp"/>
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/yuyue_dan"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/space_50dp"
+            android:layout_height="@dimen/space_30dp"
+            app:sb_button_color="@color/white"
+            android:layout_centerVertical="true"
+            app:sb_checked="true"
+            app:sb_checked_color="@color/theme_color" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:padding="@dimen/space_10dp"
+        android:text="设置预约时间"/>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_10dp"
+        android:layout_marginRight="@dimen/space_10dp"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:layout_marginBottom="@dimen/space_20dp"
+        android:orientation="horizontal">
+
+        <TextView android:id="@+id/start_time"
+            android:layout_width="@dimen/space_0dp"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/space_10dp"
+            android:paddingTop="@dimen/space_10dp"
+            android:paddingBottom="@dimen/space_10dp"
+            android:layout_height="wrap_content"
+            android:text="从现在"
+            android:background="@drawable/index_menu_bg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="至"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:layout_marginRight="@dimen/space_10dp"
+            android:textColor="@color/black"/>
+
+        <TextView android:id="@+id/end_time"
+            android:layout_width="@dimen/space_0dp"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/space_10dp"
+            android:paddingTop="@dimen/space_10dp"
+            android:paddingBottom="@dimen/space_10dp"
+            android:layout_height="wrap_content"
+            android:text="任意时间"
+            android:background="@drawable/index_menu_bg"/>
+
+
+    </LinearLayout>
+
+
+    <include layout="@layout/view_liner_05dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="订单筛选"
+        android:layout_marginLeft="@dimen/space_10dp"
+        android:layout_marginTop="@dimen/space_20dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_20sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/space_10dp"
+        android:layout_marginTop="@dimen/space_20dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接机场、火车站订单"
+            android:textColor="@color/black"
+          />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/order_saixuan"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/space_50dp"
+            android:layout_height="@dimen/space_30dp"
+            app:sb_button_color="@color/white"
+            android:layout_centerVertical="true"
+            app:sb_checked="true"
+            app:sb_checked_color="@color/theme_color" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:padding="@dimen/space_10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/save_setting"
+            style="@style/ThemeColorBorderRadiusBtn"
+            android:layout_marginBottom="@dimen/space_0dp"
+            android:layout_marginLeft="@dimen/space_0dp"
+            android:layout_marginRight="@dimen/space_0dp"
+            android:layout_marginTop="@dimen/space_40dp"
+            android:text="保存设置" />
+
+    </LinearLayout>
+</LinearLayout>
+
+
+
+
+
+

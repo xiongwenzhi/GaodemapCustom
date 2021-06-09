@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--#64A06F-->
+    <!--#64A36F-->
+    <!--#D92129-->
+    <!--主题色-->
+    <color name="theme_color">#ff9600</color>
+    <!--透明-->
+    <color name="trans">#00000000</color>
+    <!--黑色-->
+    <color name="black">#000000</color>
+    <!--白色-->
+    <color name="white">#FFFFFF</color>
+    <!--红色-->
+    <color name="red">#FF0000</color>
+    <!--绿色-->
+    <color name="green">#00FF00</color>
+    <!--蓝色-->
+    <color name="blue">#0000FF</color>
+    <!--浅黑色-->
+    <color name="light_black">#454545</color>
+    <!--灰色-->
+    <color name="gray">#666666</color>
+    <color name="gray1">#999999</color>
+    <color name="gray2">#CCCCCC</color>
+    <color name="gray3">#DDDDDD</color>
+    <!--布局灰色背景-->
+    <color name="layout_gray_bg">#EFEFEF</color>
+    <!--细线(深色)-->
+    <color name="line_dark_color">@color/gray2</color>
+    <!--细线(浅色)-->
+    <color name="line_light_color">#DEDEDE</color>
+    <!--状态栏颜色-->
+    <color name="status_bar_color">@color/white</color>
+    <!--弹出框透明黑色背景-->
+    <color name="dialog_black_bj_color">#77000000</color>
+    <!--列表空数据的提示文字的颜色-->
+    <color name="list_empty_data_text_color">@color/gray1</color>
+
+    <!--透明黑色背景-->
+    <color name="black_bj_color">#5e000000</color>
+    <!--浅灰色背景-->
+    <color name="activity_bg">#f4f5f6</color>
+    <color name="cf9f9f9">#f9f9f9</color>
+    <!--按钮灰色-->
+    <color name="ccbcbcb">#cbcbcb</color>
+    <color name="ca4">#a4a4a4</color>
+    <color name="xiangbin">#C38F43</color>
+    <color name="zongse">#A67D3D</color>
+    <color name="zs">#800080</color>
+    <color name="fs">#FFC0CB</color>
+    <color name="cs">#ff9026</color>
+    <color name="c67">#898a8c</color>
+
+</resources>

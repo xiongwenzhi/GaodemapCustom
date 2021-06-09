@@ -1,0 +1,145 @@
+<resources>
+
+    // ---------------------------------------------------------------------------------------------
+    // 主题
+
+    <!--App全局主题-->
+    <style name="AppGlobalTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--标题栏颜色-->
+        <item name="colorPrimary">@color/theme_color</item>
+        <!--状态栏颜色-->
+        <item name="colorPrimaryDark">@color/theme_color</item>
+        <!--输入框颜色-->
+        <item name="colorAccent">@color/theme_color</item>
+        <!--窗口颜色-->
+        <item name="android:windowBackground">@color/trans</item>
+        <!--动画动画-->
+        <!--<item name="android:windowAnimationStyle">@style/ActivityAnim</item>-->
+    </style>
+
+    <!--Welcome主题-->
+    <style name="WelcomeTheme" parent="@style/AppGlobalTheme">
+        <item name="colorPrimary">@color/trans</item>
+        <item name="colorPrimaryDark">@color/trans</item>
+        <item name="colorAccent">@color/trans</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:windowBackground">@mipmap/welcome</item>
+    </style>
+
+    <!--Activity动画-->
+    <style name="ActivityAnim" parent="@android:style/Animation.Activity">
+        <!--打开新的Activity时,新的Activity进入的动画-->
+        <item name="android:activityOpenEnterAnimation">@anim/act_enter_right</item>
+        <!--打开新的Activity时,当前Activity退出的动画-->
+        <item name="android:activityOpenExitAnimation">@anim/act_exit_left</item>
+        <!--关闭当前Activity时,前一个Activity进入的动画-->
+        <item name="android:activityCloseEnterAnimation">@anim/act_enter_left</item>
+        <!--关闭当前Activity时,当前Activity退出的动画-->
+        <item name="android:activityCloseExitAnimation">@anim/act_exit_right</item>
+    </style>
+    <!--窗口动画-->
+    <!--<style name="windowAnim" parent="@android:style/Animation.Translucent">
+        <item name="android:windowEnterAnimation">@anim/act_enter_right</item>
+        <item name="android:windowExitAnimation">@anim/act_exit_left</item>
+    </style>-->
+
+    // ---------------------------------------------------------------------------------------------
+    // 分割线
+
+    <!--水平分割线,gray2-->
+    <style name="style_line_horizontal_gray2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/gray2</item>
+    </style>
+    <!--水平分割线,gray3-->
+    <style name="style_line_horizontal_gray3">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/gray3</item>
+    </style>
+    <!--水平分割线,layout_gray_bj-->
+    <style name="style_line_horizontal_layout_gray_bg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/layout_gray_bg</item>
+    </style>
+    <!--垂直分割线,gray2-->
+    <style name="style_line_vertical_gray2">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/gray2</item>
+    </style>
+    <!--垂直分割线,gray3-->
+    <style name="style_line_vertical_gray3">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/gray3</item>
+    </style>
+    <!--垂直分割线,layout_gray_bj-->
+    <style name="style_line_vertical_layout_gray_bg">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/layout_gray_bg</item>
+    </style>
+
+    // ---------------------------------------------------------------------------------------------
+    // Dialog样式
+
+    <style name="commonStyleDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <!--弹出框周围模糊-->
+    <style name="style_dialog_fuzzy" parent="commonStyleDialog">
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <!--弹出框周围不模糊-->
+    <style name="style_dialog_no_fuzzy" parent="commonStyleDialog">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <!--上部弹窗框动画-->
+    <style name="DialogTopmAnim">
+        <item name="android:windowEnterAnimation">@anim/dialog_top_anim_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_top_anim_exit</item>
+    </style>
+    <!--底部弹窗框动画-->
+    <style name="DialogBottomAnim">
+        <item name="android:windowEnterAnimation">@anim/dialog_bottom_anim_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_bottom_anim_exit</item>
+    </style>
+    <!--中间弹窗框动画-->
+    <style name="DialogCentreAnim">
+        <item name="android:windowEnterAnimation">@anim/dialog_centre_anim_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_centre_anim_exit</item>
+    </style>
+
+    // ---------------------------------------------------------------------------------------------
+    // TabLayout
+
+    <!--TabLayout-->
+    <!--    <style name="style_tab_layout" parent="Widget.Design.TabLayout">-->
+    <!--        &lt;!&ndash;<item name="tabMaxWidth">@dimen/space_100dp</item>&ndash;&gt;-->
+    <!--        &lt;!&ndash;<item name="tabPaddingStart">@dimen/space_15dp</item>&ndash;&gt;-->
+    <!--        &lt;!&ndash;<item name="tabPaddingEnd">@dimen/space_15dp</item>&ndash;&gt;-->
+    <!--        <item name="tabIndicatorColor">@color/theme_color</item>-->
+    <!--        <item name="tabIndicatorHeight">@dimen/space_2dp</item>-->
+    <!--        <item name="tabBackground">@color/white</item>-->
+    <!--        <item name="tabTextAppearance">@style/myTextAppearance</item>-->
+    <!--        <item name="tabSelectedTextColor">@color/theme_color</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="myTextAppearance" parent="TextAppearance.Design.Tab">-->
+    <!--        <item name="android:textSize">@dimen/font_size_16sp</item>-->
+    <!--        <item name="android:textColor">@color/light_black</item>-->
+    <!--        <item name="textAllCaps">true</item>-->
+    <!--    </style>-->
+
+</resources>

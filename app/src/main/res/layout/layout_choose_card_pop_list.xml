@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_round"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/space_30dp"
+    android:paddingLeft="@dimen/space_10dp"
+    android:paddingRight="@dimen/space_10dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_10dp">
+
+
+        <ImageView
+            android:id="@+id/dismiss_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/card_close_image" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择开户银行"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_18sp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bank_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+
+
+
+
+
+

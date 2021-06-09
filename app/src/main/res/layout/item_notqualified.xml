@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.xiaofeidev.round.RoundFrameLayout android:id="@+id/jsy_car"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_90dp"
+    app:rd_top_left_radius="10dp"
+    android:layout_marginLeft="@dimen/space_10dp"
+    android:layout_marginRight="@dimen/space_10dp"
+    app:rd_top_right_radius="@dimen/space_10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/driver_card_no"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/space_10dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="网约车驾驶员证"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_18sp"/>
+
+                    <TextView android:id="@+id/subTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="获得此资质后可正常接单"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/font_size_14sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/space_20dp"
+                    android:text="去了解"
+                    android:padding="@dimen/space_5dp"
+                    android:background="@drawable/theme_bg_5"
+                    android:drawablePadding="@dimen/space_10dp"
+                    android:textColor="@color/white"
+                    />
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+        </com.github.xiaofeidev.round.RoundFrameLayout>

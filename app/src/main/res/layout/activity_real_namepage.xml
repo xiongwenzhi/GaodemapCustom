@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <include layout="@layout/common_title_bar_theme" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#737790"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/space_20dp"
+            android:paddingTop="@dimen/space_20dp"
+            android:paddingBottom="@dimen/space_60dp"
+            android:orientation="vertical">
+
+            <com.android.orangetravel.base.widgets.CircleImageView
+                android:id="@+id/frg_mine_header"
+                android:layout_width="@dimen/space_40dp"
+                android:layout_height="@dimen/space_40dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/default_avatar"
+                app:border_color="@color/white"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/space_15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*盼"
+                    android:textSize="@dimen/font_size_16sp"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已认证"
+                    android:textSize="@dimen/font_size_12sp"
+                    android:paddingLeft="@dimen/space_5dp"
+                    android:paddingTop="@dimen/space_2dp"
+                    android:paddingBottom="@dimen/space_2dp"
+                    android:paddingRight="@dimen/space_5dp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/space_10dp"
+                    android:background="@drawable/border_one_white"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="360*** **** **** **57"
+                android:textSize="@dimen/font_size_18sp"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/activity_bg"
+            android:layout_marginLeft="@dimen/space_10dp"
+            android:layout_marginRight="@dimen/space_10dp"
+            app:cardCornerRadius="@dimen/space_5dp"
+            android:layout_gravity="bottom"
+            app:cardElevation="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="189****6777"
+                    android:textColor="@color/theme_color"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="当前账号"
+                    android:textColor="@color/theme_color"/>
+
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+         </FrameLayout>
+       </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/common_title_bar_white" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_0dp"
+        android:layout_weight="1"
+        android:background="@color/white" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.amap.api.maps.MapView
+                android:id="@+id/map"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/space_20dp"
+                android:paddingBottom="@dimen/space_20dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/space_15dp"
+                    android:layout_height="@dimen/space_15dp"
+                    android:src="@mipmap/ic_launcher"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_12sp"
+                    android:layout_marginLeft="@dimen/space_2dp"
+                    android:textColor="@color/black"
+                    android:text="安橙出行"/>
+            </LinearLayout>
+
+            <!--流水显示  已接到了多少单-->
+            <LinearLayout android:id="@+id/my_trip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:paddingTop="@dimen/space_8dp"
+                android:paddingBottom="@dimen/space_8dp"
+                android:paddingLeft="@dimen/space_20dp"
+                android:paddingRight="@dimen/space_20dp"
+                android:background="@drawable/flowingwater_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_14sp"
+                    android:textColor="@color/index_floww_water_color"
+                    android:text="流水"/>
+
+                <TextView android:id="@+id/sumWater"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_18sp"
+                    android:textColor="@color/index_floww_water_color"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_14sp"
+                    android:textColor="@color/index_floww_water_color"
+                    android:text="元  "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_14sp"
+                    android:textColor="@color/index_floww_water_color"
+                    android:text="已接"/>
+                <TextView android:id="@+id/sumOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_18sp"
+                    android:textColor="@color/index_floww_water_color"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_14sp"
+                    android:textColor="@color/index_floww_water_color"
+                    android:text="单"/>
+
+                <View
+                    android:layout_width="@dimen/space_0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/space_10dp"
+                    android:layout_marginTop="@dimen/space_5dp"
+                    android:layout_marginBottom="@dimen/space_5dp"
+                    android:background="@color/index_floww_water_color"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/space_10dp"
+                    android:src="@mipmap/x_datapanel_arrow"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    app:cardCornerRadius="@dimen/space_5dp"
+                    android:elevation="@dimen/space_5dp"
+                    android:layout_marginRight="@dimen/space_10dp"
+                    android:layout_marginBottom="@dimen/space_10dp"
+                    android:paddingRight="@dimen/space_10dp"
+                    android:paddingBottom="@dimen/space_10dp"
+                    android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom|right"
+                android:layout_height="wrap_content">
+
+                <ImageView android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/space_5dp"
+                    android:paddingBottom="@dimen/space_5dp"
+                    android:background="@drawable/index_location_bg"
+                    android:src="@mipmap/heapmap_reset"/>
+
+                <include layout="@layout/view_liner_05dp"/>
+
+                <ImageView android:id="@+id/around"
+                    android:layout_width="wrap_content"
+                    android:paddingTop="@dimen/space_5dp"
+                    android:paddingBottom="@dimen/space_5dp"
+                    android:background="@drawable/index_reset_bg"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/heapmap_around"/>
+
+
+
+            </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--导航提示-->
+                <androidx.cardview.widget.CardView
+                     android:id="@+id/navigation_layout"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/space_10dp"
+                    android:layout_marginRight="@dimen/space_10dp"
+                    android:layout_marginBottom="@dimen/space_10dp"
+                    app:cardCornerRadius="@dimen/space_5dp"
+                    android:visibility="gone"
+                    android:elevation="@dimen/space_5dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:paddingLeft="@dimen/space_10dp"
+                        android:paddingBottom="@dimen/space_20dp"
+                        android:paddingRight="@dimen/space_5dp"
+                        android:paddingTop="@dimen/space_10dp"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView android:id="@+id/card_close_image_dh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_alignParentRight="true"
+                                android:src="@mipmap/card_close_image"/>
+
+                            <TextView android:id="@+id/address_daohang"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/space_22dp"
+                                android:textSize="@dimen/font_size_16sp"
+                                android:textColor="@color/black"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_5dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView android:id="@+id/distance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/font_size_13sp"
+                                    android:text=""/>
+
+                                <TextView android:id="@+id/timeconsuming"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/font_size_13sp"
+                                    android:text=""/>
+
+                            </LinearLayout>
+
+                            <TextView android:id="@+id/navi_btn"
+                                android:layout_width="@dimen/space_50dp"
+                                android:layout_height="@dimen/space_25dp"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="@dimen/space_10dp"
+                                android:layout_marginRight="@dimen/space_10dp"
+                                android:gravity="center"
+                                android:background="@mipmap/daohang"
+                                android:text="导航"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--公共服务（厕所 加油站等）-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/public_service_layout"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/space_10dp"
+                    android:layout_marginRight="@dimen/space_10dp"
+                    android:layout_marginBottom="@dimen/space_10dp"
+                    app:cardCornerRadius="@dimen/space_5dp"
+                    android:visibility="gone"
+                    android:elevation="@dimen/space_5dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:paddingLeft="@dimen/space_10dp"
+                        android:paddingBottom="@dimen/space_20dp"
+                        android:paddingRight="@dimen/space_5dp"
+                        android:paddingTop="@dimen/space_10dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView android:id="@+id/public_service_daohang"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginRight="@dimen/space_22dp"
+                                android:textSize="@dimen/font_size_16sp"
+                                android:textColor="@color/black"/>
+
+                            <ImageView android:id="@+id/public_service_image_dh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_alignParentRight="true"
+                                android:src="@mipmap/card_close_image"/>
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_5dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView android:id="@+id/public_service_distance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/font_size_13sp"
+                                    android:text=""/>
+
+                                <TextView android:id="@+id/public_service_timeconsuming"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/space_5dp"
+                                    android:textSize="@dimen/font_size_13sp"
+                                    android:text=""/>
+
+                                <TextView android:id="@+id/service_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/space_5dp"
+                                    android:textColor="@color/gray"
+                                    android:text=""/>
+
+                            </LinearLayout>
+
+                            <TextView android:id="@+id/navi_service"
+                                android:layout_width="@dimen/space_60dp"
+                                android:layout_height="@dimen/space_30dp"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="@dimen/space_10dp"
+                                android:layout_marginRight="@dimen/space_10dp"
+                                android:gravity="center"
+                                android:textSize="@dimen/font_size_16sp"
+                                android:background="@mipmap/daohang"
+                                android:text="导航"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--每日提示-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/space_10dp"
+                    android:layout_marginRight="@dimen/space_10dp"
+                    android:layout_marginBottom="@dimen/space_10dp"
+                    app:cardCornerRadius="@dimen/space_5dp"
+                    android:elevation="@dimen/space_5dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+
+            <LinearLayout android:id="@+id/card_close__layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:paddingLeft="@dimen/space_10dp"
+                android:paddingBottom="@dimen/space_20dp"
+                android:paddingRight="@dimen/space_5dp"
+                android:paddingTop="@dimen/space_10dp"
+                android:orientation="vertical">
+
+                <ImageView android:id="@+id/card_close_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:src="@mipmap/card_close_image"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/space_22dp"
+                    android:text="这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题"
+                    android:textSize="@dimen/font_size_16sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/space_20dp"
+                    android:text="这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容"
+                    android:layout_marginTop="@dimen/space_10dp"
+                    android:textSize="@dimen/font_size_14sp"
+                    android:textColor="@color/gray"/>
+
+
+            </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--司机日报-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/daily_layout"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/space_10dp"
+                    android:layout_marginRight="@dimen/space_10dp"
+                    android:layout_marginBottom="@dimen/space_10dp"
+                    app:cardCornerRadius="@dimen/space_5dp"
+                    android:elevation="@dimen/space_5dp"
+                    android:visibility="visible"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/space_10dp"
+                    android:paddingRight="@dimen/space_5dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="司机日报"
+                            android:gravity="center"
+                            android:layout_marginLeft="@dimen/space_10dp"
+                            android:paddingLeft="@dimen/space_2dp"
+                            android:paddingRight="@dimen/space_2dp"
+                            android:textColor="@color/white"
+                            android:background="@mipmap/card_tip_image"/>
+
+                        <ImageView android:id="@+id/daily_dismiss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_10dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/card_close_image"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/space_10dp"
+                        android:paddingLeft="@dimen/space_20dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/jiayou"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/space_20dp"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/space_22dp"
+                                android:text="司机日报：遇到醉酒乘客的标准应对指南"
+                                android:textSize="@dimen/font_size_16sp"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/space_20dp"
+                                android:text="看看司机自己的接单情景剧"
+                                android:layout_marginTop="@dimen/space_10dp"
+                                android:textSize="@dimen/font_size_14sp"
+                                android:textColor="@color/gray"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/view_liner_05dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="查看详情"
+                        android:padding="@dimen/space_10dp"
+                        android:drawableEnd="@mipmap/profile_arror"
+                        android:textColor="@color/gray1"/>
+
+
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!--左下角安橙地图显示-->
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:background="@color/title_bar_black"
+        android:paddingTop="@dimen/space_20dp"
+        android:paddingLeft="@dimen/space_20dp"
+        android:paddingBottom="@dimen/space_20dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="模式"
+            android:textColor="@color/white" />
+        <View
+            android:layout_width="@dimen/space_1dp"
+            android:layout_height="@dimen/space_20dp"
+            android:layout_centerVertical="true"
+           android:layout_marginLeft="@dimen/space_20dp"
+            android:background="@color/line_light_color"
+            android:layout_toRightOf="@+id/model" />
+
+        <TextView android:id="@+id/Driving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/driving_bg_green"
+            android:paddingLeft="@dimen/space_80dp"
+            android:paddingTop="@dimen/space_10dp"
+            android:paddingRight="@dimen/space_80dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16sp"
+            android:paddingBottom="@dimen/space_10dp"
+            android:text="出车" />
+
+        <LinearLayout android:id="@+id/shouche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"
+            android:layout_marginRight="@dimen/space_20dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/space_1dp"
+                android:layout_height="@dimen/space_20dp"
+                android:layout_marginLeft="@dimen/space_20dp"
+                android:background="@color/line_light_color" />
+
+
+            <TextView
+                android:id="@+id/Collectcar"
+                android:layout_marginLeft="@dimen/space_10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="收车"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

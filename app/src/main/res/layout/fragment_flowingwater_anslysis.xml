@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_120dp"
+            android:background="#ff9600"
+            android:orientation="vertical"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_150dp"
+            android:layout_marginTop="@dimen/space_30dp"
+            android:layout_marginLeft="@dimen/space_20dp"
+            android:layout_marginRight="@dimen/space_20dp"
+            android:gravity="center"
+            android:background="@drawable/common_bg_white_5dp"
+            android:orientation="vertical">
+
+
+            <TextView android:id="@+id/water"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_size_28sp"/>
+
+            <TextView android:id="@+id/m_liushui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/space_5dp"
+                android:textSize="@dimen/font_size_16sp"
+                android:text=""/>
+
+            <TextView android:id="@+id/order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray1"
+                android:textSize="@dimen/font_size_16sp"
+                android:text=""/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_10dp"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/space_3dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/space_4dp"
+            android:layout_marginBottom="@dimen/space_4dp"
+            android:background="@color/black"/>
+
+        <TextView android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_5dp"
+            android:text="9月流水占比"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_20dp"
+        android:paddingTop="@dimen/space_20dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/chart1"
+                android:layout_marginRight="@dimen/space_60dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_200dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="@dimen/space_10dp"
+                                android:layout_height="@dimen/space_10dp"
+                                android:background="#4a94f7"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/font_size_12sp"
+                                android:layout_marginLeft="@dimen/space_5dp"
+                                android:text="基础车费"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="@dimen/space_5dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="@dimen/space_10dp"
+                                android:layout_height="@dimen/space_10dp"
+                                android:background="#44e3cf"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/font_size_12sp"
+                                android:layout_marginLeft="@dimen/space_5dp"
+                                android:text="奖励"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="@dimen/space_5dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="@dimen/space_10dp"
+                                android:layout_height="@dimen/space_10dp"
+                                android:background="#f8bb60"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/font_size_12sp"
+                                android:layout_marginLeft="@dimen/space_5dp"
+                                android:text="其他"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+        </FrameLayout>
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_10dp"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/space_3dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/space_4dp"
+            android:layout_marginBottom="@dimen/space_4dp"
+            android:background="@color/black"/>
+
+        <TextView android:id="@+id/water_qs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_5dp"
+            android:text="9月流水趋势"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="单位：日"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barchart"
+        android:layout_marginTop="@dimen/space_20dp"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/space_40dp"
+        android:layout_height="@dimen/space_300dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

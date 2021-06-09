@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_round"
+    android:paddingTop="@dimen/space_20dp"
+    android:paddingLeft="@dimen/space_10dp"
+    android:paddingRight="@dimen/space_10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/list_test_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size_18sp"
+        android:textColor="@color/black"
+        android:text="" />
+
+    <TextView android:id="@+id/content_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20dp"
+        android:text=""/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_60dp"
+        android:layout_marginBottom="@dimen/space_10dp"
+        android:orientation="horizontal">
+
+
+        <TextView android:id="@+id/look_details"
+            android:layout_width="@dimen/space_0dp"
+            android:layout_weight="1"
+            android:background="@drawable/theme_bg_5"
+            android:gravity="center"
+            android:padding="@dimen/space_8dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="查看详情"/>
+
+        <TextView android:id="@+id/user_know"
+            android:layout_width="@dimen/space_0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/space_20dp"
+            android:padding="@dimen/space_8dp"
+            android:textColor="@color/white"
+            android:background="@drawable/grey_shape_5"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="我知道了"/>
+
+    </LinearLayout>
+</LinearLayout>
+
+
+
+
+
+

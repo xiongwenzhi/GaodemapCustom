@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/space_15dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView android:id="@+id/test_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="网络连接"
+        android:textColor="@color/colorIcon"/>
+
+    <TextView android:id="@+id/tobetest"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorIcon"
+        android:text="待检测"/>
+
+    <ImageView android:id="@+id/test_success"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/select_grey"/>
+
+
+
+
+
+</RelativeLayout>

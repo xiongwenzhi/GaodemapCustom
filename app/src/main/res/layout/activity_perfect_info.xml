@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <include layout="@layout/common_title_bar_theme" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/space_10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="需要材料"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_18sp"/>
+
+        <TextView android:id="@+id/top_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_5dp"
+            android:text="请确保身边已准备好以下材料，需一次性完成上传"/>
+
+        <ImageView
+            android:layout_width="@dimen/space_150dp"
+            android:layout_height="@dimen/space_100dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="@dimen/space_20dp"
+            android:src="@mipmap/car_driving"/>
+
+        <TextView
+            android:layout_width="@dimen/space_150dp"
+            android:layout_height="wrap_content"
+            android:text="行驶证"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/space_150dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/car_appearance"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/space_20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="车辆在身边"
+                   android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_16sp"/>
+
+                <TextView android:id="@+id/center_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="注册时，需要对车辆实时拍摄，请您合理安排已确保照片可在规定时间内上传"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom">
+
+            <TextView
+                android:id="@+id/readly"
+                style="@style/ThemeColorBorderRadiusBtn"
+                android:layout_marginBottom="@dimen/space_20dp"
+                android:layout_marginLeft="@dimen/space_20dp"
+                android:layout_marginRight="@dimen/space_20dp"
+                android:text="我准备好了" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

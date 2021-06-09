@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">滴滴出行</string>
+    <string name="action_settings">Settings</string>
+    <string name="common_confirm">确定</string>
+    <string name="common_cancel">取消</string>
+    <string name="privacy_tips_key1">《用户协议》</string>
+    <string name="privacy_tips_key2">《隐私政策》</string>
+    <string name="privacy_tips">欢迎使用笔淘网！为了保护您的隐私和使用安全，请您务必仔细阅读我们的《用户协议》和《隐私政策》。在确认充分理解并同意后再开始使用我们的服务！</string>
+</resources>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.android.orangetravel">
+
+    <application
+        android:name=".application.MyApp"
+        android:allowBackup="true"
+        android:extractNativeLibs="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppGlobalTheme"
+        android:usesCleartextTraffic="true">
+        <!-- 欢迎页 -->
+        <activity
+            android:name=".ui.main.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WelcomeTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <!--导航地图-->
+        <activity android:name=".ui.main.GPSNaviActivity" />
+        <!--个人中心-->
+        <activity android:name=".ui.main.MineActivity" />
+        <!--设置-->
+        <activity android:name=".ui.main.SettingActivity" />
+        <!--联系我们-->
+        <activity android:name=".ui.main.ContactusActivity" />
+        <!--关于我们-->
+        <activity android:name=".ui.main.AboutusActivity" />
+        <!--账号与安全-->
+        <activity android:name=".ui.main.AccountsecurityActivity" />
+        <!--修改手机号第一步-->
+        <activity android:name=".ui.main.ChangePhoneActivity" />
+        <!--设置新手机号-->
+        <activity android:name=".ui.main.SetNewPhoneActivity" />
+        <!--获取验证码-->
+        <activity android:name=".ui.main.GetMsgCodeActivity"/>
+        <!--修改密码-->
+        <activity android:name=".ui.main.UpdatePwdActivity"/>
+        <!--设备管理-->
+        <activity android:name=".ui.main.DeviceManageActivity"/>
+        <!--常见问题-->
+        <activity android:name=".ui.main.CommonProblemActivity"/>
+        <!--添加紧急联系人-->
+        <activity android:name=".ui.main.EmergencyContactActivity"/>
+        <!--我的二维码-->
+        <activity android:name=".ui.main.MyQrCodeActivity"/>
+        <!--网页加载-->
+        <activity android:name=".ui.main.WebviewActivity"/>
+        <!--导航设置-->
+        <activity android:name=".ui.main.NavigationSettingActivity"/>
+        <!--城市选择-->
+        <activity android:name=".ui.main.CitySelectActivity"/>
+        <!--听单检测-->
+        <activity android:name=".ui.main.TripTestActivity"/>
+        <!--钱包-->
+        <activity android:name=".ui.main.WalletActivity"/>
+        <!--提现-->
+        <activity android:name=".ui.main.WithdrawalActivity"/>
+        <!--安橙出行-->
+        <activity android:name=".ui.main.OrgangeMapActivity"/>
+        <!--我的消息-->
+        <activity android:name=".ui.main.MyMessageActivity"/>
+        <!--我的行程-->
+        <activity android:name=".ui.main.MyTripActivity"/>
+        <!--行程详情-->
+        <activity android:name=".ui.main.LtineraryDetailsActivity"/>
+        <!--我的车辆-->
+        <activity android:name=".ui.main.MyCarListActivity"/>
+        <!--添加车辆-->
+        <activity android:name=".ui.main.AddCarActivity"/>
+        <!--我的资质-->
+        <activity android:name=".ui.main.MyQualificationsActivity"/>
+        <!--合规认证-->
+        <activity android:name=".ui.main.CompliancecertificationActivity"/>
+        <!--网约车驾驶证资料补齐-->
+        <activity android:name=".ui.main.DriverinformationActivity"/>
+        <!--流水分析-->
+        <activity android:name=".ui.main.FlowingWaterActivity"
+            android:hardwareAccelerated="false"/>
+        <!--接预约乘客导航-->
+        <activity android:name=".ui.main.PickUppassengersActivity"/>
+        <!--乘客实时导航-->
+        <activity android:name=".ui.main.RealTimeGPSNaviActivity"/>
+        <!--确认账单-->
+        <activity android:name=".ui.main.ConfirmbillActivity"/>
+        <!--行程结束-->
+        <activity android:name=".ui.main.EndoftripActivity"/>
+        <!--个人主页-->
+        <activity android:name=".ui.main.PersonalHomepageActivity"/>
+        <!--实名认证-->
+        <activity android:name=".ui.main.RealNamepageActivity"/>
+        <!--登录-->
+        <activity android:name=".ui.main.LoginActivity"/>
+        <!--车辆详情-->
+        <activity android:name=".ui.main.CarDetailsActivity"/>
+        <!--完善信息-->
+        <activity android:name=".ui.main.PerfectInfoActivity"/>
+        <!--完善信息第二步-->
+        <activity android:name=".ui.main.PerfectInfoFinalActivity"/>
+        <!--添加银行卡-->
+        <activity android:name=".ui.main.AddBankActivity"/>
+        <!--提现记录-->
+        <activity android:name=".ui.main.WithdrawalHistoryActivity"/>
+        <!--支持银行卡-->
+        <activity android:name=".ui.main.SystomSetCardActivity"/>
+        <!--网约车运输证-->
+        <activity android:name=".ui.main.TransportformationActivity"/>
+        <!--添加紧急联系人-->
+        <activity android:name=".ui.main.AddContactActivity"/>
+        <!--收费明细-->
+        <activity android:name=".ui.main.ChargeDetailsActivity"/>
+        <activity android:name=".ui.main.TestActivity"/>
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="eef0408163ac67a86a7226bdbaa610a8" />
+
+        <service android:name="com.amap.api.location.APSService"></service>
+        <!--     在AndroidManifest.xml中增加内核首次加载时优化Service声明；    该Service仅在TBS内核首次Dex加载时触发并执行dex2oat任务，任务完成后自动结束。  --><service
+        android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService"
+        android:label="dexopt"
+        android:process=":dexopt" ></service>
+    </application>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <!-- Required -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <!-- Required -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="com.jiarui.btw.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Optional. Required for location feature -->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" /> <!-- 用于开启 debug 版本的应用在 6.0 系统上的层叠窗口权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+</manifest>

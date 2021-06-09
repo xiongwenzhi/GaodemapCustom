@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+    <include layout="@layout/common_title_bar_theme" />
+    <LinearLayout android:id="@+id/call_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="客服" />
+
+
+
+        <TextView
+            android:id="@+id/service"
+            android:layout_width="@dimen/space_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_10dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="0791-88888888" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/profile_arror" />
+
+
+    </LinearLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+
+    <LinearLayout android:id="@+id/call_url"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网址" />
+
+
+
+        <TextView android:id="@+id/url"
+            android:layout_width="@dimen/space_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_10dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="www.didiglobal.com" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/profile_arror" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout  android:id="@+id/call_app"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微信小程序" />
+
+
+
+        <TextView android:id="@+id/mini"
+            android:layout_width="@dimen/space_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_10dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="@string/app_name" />
+
+    </LinearLayout>
+
+    <include layout="@layout/view_liner_05dp"/>
+
+    <LinearLayout  android:id="@+id/call_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/space_45dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="联系地址" />
+
+
+
+        <TextView android:id="@+id/address"
+            android:layout_width="@dimen/space_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_10dp"
+            android:layout_weight="1"
+            android:maxLines="2"
+            android:gravity="right"
+            android:text="南昌市青山湖区青山湖北大道2199号10层1007号" />
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

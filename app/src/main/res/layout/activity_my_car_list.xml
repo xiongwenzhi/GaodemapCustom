@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <include layout="@layout/common_title_bar_theme" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/my_car_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <include layout="@layout/common_pull_empty" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/add_car"
+        style="@style/ThemeColorBorderRadiusBtn"
+        android:layout_marginBottom="@dimen/space_20dp"
+        android:layout_marginLeft="@dimen/space_20dp"
+        android:layout_marginRight="@dimen/space_20dp"
+        android:text="新增车辆" />
+
+
+</LinearLayout>

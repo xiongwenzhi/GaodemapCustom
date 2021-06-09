@@ -1,0 +1,3 @@
+include ':app',
+':base',':citypicker' , ':pickerview', ':wheelview', ':MPChartLib'
+rootProject.name = "OrangeTravel"

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <include layout="@layout/common_title_bar_theme" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+   <TextView android:id="@+id/info_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:textColor="@color/red"
+       android:padding="@dimen/space_10dp"
+       android:drawablePadding="@dimen/space_10dp"
+       android:drawableLeft="@mipmap/carout_check_error"
+        android:text="审核失败原因(1处信息有误，请修改)"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/space_10dp"
+            android:padding="@dimen/space_10dp"
+            android:background="@drawable/grey_shape_8">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/yuanyin_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="行驶证:您提交的行驶证照片模糊"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/space_10dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="行驶证:您提交的行驶证照片模糊"/>-->
+
+        </LinearLayout>
+
+
+        <include layout="@layout/view_liner_10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_10dp">
+
+            <View
+                android:layout_width="@dimen/space_3dp"
+                android:layout_height="@dimen/space_10dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_10dp"
+                android:text="行驶证"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <include layout="@layout/view_liner_05dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_10dp"
+            android:layout_marginBottom="@dimen/space_10dp"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:paddingRight="@dimen/space_10dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout android:id="@+id/driving_front"
+                android:layout_width="@dimen/space_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--                <ImageView android:id="@+id/image_one"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="@dimen/space_100dp"-->
+                    <!--                    android:scaleType="fitXY"-->
+                    <!--                    android:src="@mipmap/car_license_one" />-->
+
+                    <com.github.xiaofeidev.round.RoundImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/image_one"
+                        android:src="@mipmap/car_license_two"
+                        android:layout_height="@dimen/space_100dp"
+                        app:borderRadius="@dimen/space_5dp"
+                        app:rd_radius="@dimen/space_10dp"
+                        android:scaleType="fitXY" />
+<!--                    <com.android.orangetravel.ui.widgets.view.XCRoundRectImageView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:id="@+id/image_one"-->
+<!--                        android:src="@mipmap/car_license_two"-->
+<!--                        android:layout_height="@dimen/space_100dp"-->
+<!--                        />-->
+
+                    <View android:id="@+id/car_lic_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_100dp"
+                        android:background="@drawable/grey_66_shape_8"/>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/space_30dp"
+                            android:layout_height="@dimen/space_30dp"
+                            android:src="@mipmap/icon_camera"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="上传行驶证正面"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+            <LinearLayout android:id="@+id/driving_reverse"
+                android:layout_width="@dimen/space_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/space_20dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.github.xiaofeidev.round.RoundImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/image_two"
+                        android:src="@mipmap/car_license_two"
+                        android:layout_height="@dimen/space_100dp"
+                        android:scaleType="fitXY"
+                        app:borderRadius="@dimen/space_5dp"
+                        app:rd_radius="@dimen/space_10dp"
+                        />
+
+
+                    <View android:id="@+id/car_lic_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_100dp"
+                        android:background="@drawable/grey_66_shape_8"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/space_30dp"
+                            android:layout_height="@dimen/space_30dp"
+                            android:src="@mipmap/icon_camera"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="上传行驶证反面"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/view_liner_10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_10dp">
+
+            <View
+                android:layout_width="@dimen/space_3dp"
+                android:layout_height="@dimen/space_10dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_10dp"
+                android:text="车辆外观"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <include layout="@layout/view_liner_05dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_10dp"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:paddingRight="@dimen/space_10dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout android:id="@+id/image_three"
+                android:layout_width="@dimen/space_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.github.xiaofeidev.round.RoundImageView
+                        android:id="@+id/car_test"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_100dp"
+                        app:borderRadius="@dimen/space_5dp"
+                        app:rd_radius="@dimen/space_10dp"
+                        android:scaleType="fitXY" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/space_30dp"
+                            android:layout_height="@dimen/space_30dp"
+                            android:src="@mipmap/icon_camera"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="上传车辆外观"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="@dimen/space_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:layout_marginLeft="@dimen/space_20dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/space_120dp"
+                        android:src="@mipmap/car_license_two" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_120dp"
+                        android:background="@drawable/grey_66_shape_8"/>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/space_30dp"
+                            android:layout_height="@dimen/space_30dp"
+                            android:src="@mipmap/icon_camera"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="上传行驶证反面"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/save_info"
+            style="@style/ThemeColorBorderRadiusBtn"
+            android:layout_marginLeft="@dimen/space_20dp"
+            android:layout_marginRight="@dimen/space_20dp"
+            android:layout_marginBottom="@dimen/space_20dp"
+            android:text="保存" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

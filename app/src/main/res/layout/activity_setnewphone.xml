@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar_theme" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/space_10dp"
+        android:layout_marginTop="@dimen/space_20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置新手机号"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray1"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:text="请输入您当前使用的新手机号作为登录账号"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_40dp"
+            android:layout_marginBottom="@dimen/space_10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_16sp"
+                android:text="+86"/>
+
+            <com.android.orangetravel.ui.widgets.view.SeparatorPhoneEditView
+                android:layout_width="match_parent"
+                android:id="@+id/input_phone_set_newphone"
+                android:background="@color/white"
+                android:hint="请输入手机号码"
+                android:layout_marginLeft="@dimen/space_20dp"
+                android:inputType="phone"
+                android:textSize="@dimen/font_size_16sp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <include layout="@layout/view_liner_05dp"
+            />
+
+
+            <TextView
+                android:id="@+id/nex_set_phone"
+                style="@style/ThemeColorBorderRadiusBtn"
+                android:layout_marginBottom="@dimen/space_0dp"
+                android:layout_marginLeft="@dimen/space_0dp"
+                android:layout_marginRight="@dimen/space_0dp"
+                android:layout_marginTop="@dimen/space_40dp"
+                android:text="下一步" />
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

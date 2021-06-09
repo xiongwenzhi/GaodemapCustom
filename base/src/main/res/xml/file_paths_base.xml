@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <!--<external-path
+        name="files_root"
+        path="Android/data/com.jiarui.youcha/" />
+    <external-path
+        name="external_storage_root"
+        path="." />-->
+    <cache-path
+        name="image_cache-path"
+        path="" />
+    <external-path
+        name="image_external-path"
+        path="" />
+    <files-path
+        name="image_files-path"
+        path="" />
+
+    <root-path
+        name="root_path"
+        path="." />
+
+</paths>

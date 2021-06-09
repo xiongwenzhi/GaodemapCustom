@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/common_title_bar_theme" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/app_logo"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/space_50dp"
+        android:drawablePadding="@dimen/space_10dp"
+        android:text="安橙车主1.0"/>
+
+    <TextView android:id="@+id/sm_tb"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/space_40dp"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:drawableRight="@mipmap/profile_arror"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:text="特别声明"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14sp" />
+
+    <include layout="@layout/view_liner_05dp"/>
+    <TextView android:id="@+id/sm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:drawableRight="@mipmap/profile_arror"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:text="注册协议"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14sp" />
+
+    <include layout="@layout/view_liner_05dp"/>
+    <TextView android:id="@+id/ys_zc"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45dp"
+        android:background="@color/white"
+        android:drawableRight="@mipmap/profile_arror"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:text="隐私政策"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/space_10dp"
+        android:gravity="center|bottom"
+        android:textSize="@dimen/font_size_12sp"
+        android:text="江西安橙旅游有限公司\n Copyright @2020-present All Rights Reserved"/>
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

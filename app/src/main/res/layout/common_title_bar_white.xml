@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.android.orangetravel.base.widgets.YangTitleBar
+        android:id="@+id/id_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:leftIcon="@mipmap/left_back"
+        app:statusBarColor="@color/status_bar_color"
+        app:titleColor="@color/light_black" />
+
+</merge>

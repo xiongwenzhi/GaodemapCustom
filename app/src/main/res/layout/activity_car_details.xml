@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <include layout="@layout/common_title_bar_theme" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_120dp"
+        android:background="@drawable/common_bg_white_5dp"
+        android:layout_margin="@dimen/space_10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/status_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待完善"
+            android:textSize="@dimen/font_size_18sp"/>
+
+        <TextView android:id="@+id/hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:text=""/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_120dp"
+        android:layout_marginLeft="@dimen/space_10dp"
+        android:layout_marginRight="@dimen/space_10dp"
+        android:gravity="center"
+        android:background="@drawable/common_bg_white_10dp"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/plateNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="赣A8888"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_18sp"/>
+
+        <TextView android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本田艾力绅(黑色)"/>
+
+
+
+    </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/space_60dp"
+            android:layout_height="@dimen/space_60dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/icon_car_time"/>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="@color/trans"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_1dp"
+            android:layout_marginLeft="@dimen/space_20dp"
+            android:layout_marginRight="@dimen/space_20dp"
+            android:background="@drawable/shape_dash_line"/>
+
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/space_10dp"
+        android:paddingTop="@dimen/space_10dp"
+        android:paddingRight="@dimen/space_10dp"
+        android:paddingLeft="@dimen/space_10dp"
+        android:paddingBottom="@dimen/space_10dp"
+        android:layout_marginRight="@dimen/space_10dp"
+        android:background="@drawable/common_bg_white_10dp">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车辆所在地"/>
+
+            <TextView android:id="@+id/city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务公司或承租人"/>
+
+            <TextView android:id="@+id/lessee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车主姓名"/>
+
+            <TextView android:id="@+id/owner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车主注册日期"/>
+
+            <TextView android:id="@+id/register_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView android:id="@+id/delete_car"
+                android:layout_width="@dimen/space_0dp"
+                android:layout_weight="1"
+                android:padding="@dimen/space_10dp"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/space_10dp"
+                android:layout_marginRight="@dimen/space_10dp"
+                android:layout_height="wrap_content"
+                style="@style/GreyColorBorderRadiusBtn"
+                android:text="删除车辆"/>
+
+            <TextView android:id="@+id/edit_car"
+                android:layout_width="@dimen/space_0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                style="@style/ThemeColorBorderRadiusBtn"
+                android:textColor="@color/white"
+                android:padding="@dimen/space_10dp"
+                android:layout_marginLeft="@dimen/space_10dp"
+                android:layout_marginRight="@dimen/space_10dp"
+                android:layout_height="wrap_content"
+                android:text="完善资料"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

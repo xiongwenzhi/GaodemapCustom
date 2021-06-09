@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ver="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar_theme" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/space_10dp"
+        android:layout_marginTop="@dimen/space_20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取验证码"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_22sp" />
+
+        <TextView android:id="@+id/phone_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray1"
+            android:textSize="@dimen/font_size_13sp"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:text="验证码已经发送到您的手机\n+86 15279168826"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_40dp"
+            android:layout_marginBottom="@dimen/space_10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray1"
+                android:textSize="@dimen/font_size_13sp"
+                android:text="六位数字验证码"/>
+
+
+            <TextView android:id="@+id/send_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="重新获取"
+                android:layout_gravity="right"
+                android:textColor="@color/theme_color"
+                android:paddingLeft="@dimen/space_10dp"
+                android:paddingRight="@dimen/space_10dp"
+                android:paddingTop="@dimen/space_5dp"
+                android:paddingBottom="@dimen/space_5dp"
+                android:background="@drawable/border_theme_1"/>
+
+
+        </RelativeLayout>
+
+        <com.android.orangetravel.ui.widgets.view.VerificationCodeInput
+            android:digits="1234567890"
+            android:id="@+id/verificationCodeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:layout_gravity="center_horizontal"
+            ver:box="6"
+            ver:box_bg_normal="@drawable/verification_edit_bg_normal"
+            ver:box_bg_focus="@drawable/verification_edit_bg_focus"
+            ver:child_h_padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="16dp"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
